@@ -5,16 +5,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "studenti2")
-public class Student {
+public class Student implements Serializable {
 
 
 
-    @javax.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
 
@@ -22,7 +24,7 @@ public class Student {
     private int an;
 
     @Column(name="nume")
-    private String nume;
+    private String name;
 
     @Column(name="prenume")
     private String prenume;
@@ -32,7 +34,7 @@ public class Student {
     private String specializare;
 
     @Column(name="CNP")
-    private String CNP;
+    private Long CNP;
 
     @Column(name="email")
     private String email;
