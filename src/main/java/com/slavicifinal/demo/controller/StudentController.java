@@ -21,24 +21,6 @@ public class StudentController {
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
-//    @RequestMapping(value="/lista-studenti",method = RequestMethod.GET) // sau @GetMapping
-//    public List<Student> getAllStudents() {
-//       /* studentService.doHack();*/
-//        return studentService.getAllStudents();
-//    }
-
-
-    @PostMapping("/adauga-student")
-    public ResponseEntity<Student> addNewStudent(@RequestBody Student student) {
-        Student newStudent = studentService.saveStudent(student);
-        return new ResponseEntity<>(student, HttpStatus.OK);
-    }
-
-    @PostMapping("/adauga-grup")
-    public ResponseEntity<List<Student>> addNewStudents(@RequestBody List<Student> studentList) {
-        List<Student> students = studentService.saveStudenti(studentList);
-        return new ResponseEntity<>(students, HttpStatus.OK);
-    }
 
     @GetMapping()
     public ResponseEntity<List<Student>> getAllStudents() {
@@ -60,30 +42,47 @@ public class StudentController {
     }
 
     @GetMapping("/cauta-id/{id}")
-    public ResponseEntity<Student> getStudentById(@PathVariable int id) {
+    public ResponseEntity<Student> getStudentById(@PathVariable Long id) {
         Student student = studentService.getStudentById(id);
         return new ResponseEntity<>(student, HttpStatus.OK);
+    }
+
+    @PostMapping("/adauga-student")
+    public ResponseEntity<Student> addNewStudent(@RequestBody Student student) {
+        Student newStudent = studentService.saveStudent(student);
+        return new ResponseEntity<>(student, HttpStatus.CREATED);
+    }
+
+    @PostMapping("/adauga-grup")
+    public ResponseEntity<List<Student>> addNewStudents(@RequestBody List<Student> studentList) {
+        List<Student> students = studentService.saveStudenti(studentList);
+        return new ResponseEntity<>(students, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
     public ResponseEntity<Student> updateStudent(@RequestBody Student student) {
         Student newStudent = studentService.saveStudent(student);
         return new ResponseEntity<>(newStudent, HttpStatus.OK);
-
     }
+
+    @PatchMapping("/modify")
+    public ResponseEntity<Student> modifyStudent(@RequestBody Student student) {
+        Student newStudent = studentService.saveStudent(student);
+        return new ResponseEntity<>(newStudent, HttpStatus.OK);
+    }
+
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Student> deleteStudentById(@PathVariable("id") int id) {
-        studentService.deleteStudentById(id);
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<Student> deleteStudentById(@PathVariable("id") Long id) {
+        studentService.deleteById(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @DeleteMapping("/delete-CNP/{CNP}")
-    public ResponseEntity<Student>deleteStudentByCNP(@PathVariable("CNP") Long CNP) {
-        studentService.deleteStudentByCNP(CNP);
-        return new ResponseEntity<>(HttpStatus.OK);
+    @DeleteMapping("/delete-cnp/{CNP}")
+    public ResponseEntity<Student> deleteStudentByCNP(@PathVariable Long CNP) {
+        Student foundResult = studentService.getStudentByCNP(CNP);
+        studentService.deleteById(foundResult.getId());
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-
-
 }
 

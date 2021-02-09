@@ -11,17 +11,15 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "studenti2")
+@Table(name = "studenti")
 public class Student implements Serializable {
-
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private Long id;
 
     @Column(name="an_univ")
-    private int an;
+    private Integer an;
 
     @Column(name="nume")
     private String name;
@@ -41,7 +39,4 @@ public class Student implements Serializable {
 
     @Column(name="parola")
     private String parola;
-
-
-
 }

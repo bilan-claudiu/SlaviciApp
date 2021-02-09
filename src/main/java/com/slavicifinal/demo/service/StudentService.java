@@ -27,8 +27,8 @@ public class StudentService {
         return studentRepository.saveAll(newStudenti);
     }
 
-    public Student getStudentById(int id) {
-        return studentRepository.findById(id);
+    public Student getStudentById(Long id) {
+        return studentRepository.findStudentById(id);
     }
 
     public Student getStudentByName(String name) {
@@ -43,7 +43,7 @@ public class StudentService {
        studentRepository.deleteStudentByCNP(CNP);
     }
 
-    public void deleteStudentById(int id) {
+    public void deleteById(Long id) {
         studentRepository.deleteById(id);
     }
 
