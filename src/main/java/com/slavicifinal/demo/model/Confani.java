@@ -23,11 +23,11 @@ public class Confani implements Serializable {
     private Long idmaterie;
 
     //lung. max 20 caract.(GenerationType.IDENTITY???)
-    @Column(name="promotie")
+    @Column(name="promotie", length = 20)
     private String promotie;
 
     //lung. max 3 caract.
-    @Column(name="specializare")
+    @Column(name="specializare", length = 3)
     private String specializare;
 
     @Column(name="anstudiu")

@@ -25,70 +25,70 @@ public class Absolventi implements Serializable {
     private Long idpromotie;
 
     //lungimea max 30 de caractere
-    @Column(name="nume")
+    @Column(name="nume", length = 30)
     private String nume;
 
     //lungimea max 30 de caractere
-    @Column(name="numenastere")
+    @Column(name="numenastere", length = 30)
     private String numenastere;
 
     //lungimea max 20 de caractere
-    @Column(name="initiale")
+    @Column(name="initiale", length = 20)
     private String initiale;
 
     //lungimea de max 50 caractere
-    @Column(name="tata")
+    @Column(name="tata", length = 50)
     private String tata;
 
     //lungimea max 50 de caractere
-    @Column(name="mama")
+    @Column(name="mama", length = 50)
     private String mama;
 
     @Column(name="datanastere")
     private String datanastere;
 
     //lungimea max 35 de caractere
-    @Column(name="locnastere")
+    @Column(name="locnastere", length = 35)
     private String locnastere;
 
     //lungimea max 15 caractere
-    @Column(name="nr_mat")
+    @Column(name="nr_mat", length = 15)
     private String nr_mat;
 
     //lungimea max 20 caractere
-    @Column(name="an_volum")
+    @Column(name="an_volum", length = 20)
     private String an_volum;
 
     //lungimea max 20 caractere
-    @Column(name="cnp")
+    @Column(name="cnp", length = 20)
     private String cnp;
 
     //lungimea max 20 caractere
-    @Column(name="promotia")
+    @Column(name="promotia", length = 20)
     private String promotia;
 
     //lungimea max 10 caractere
-    @Column(name="volumul")
+    @Column(name="volumul", length = 10)
     private String volumul;
 
     //lungimea max 20 caractere
-    @Column(name="anul1")
+    @Column(name="anul1", length = 20)
     private String anul1;
 
     //lungimea max 20 caractere
-    @Column(name="anul2")
+    @Column(name="anul2", length = 20)
     private String anul2;
 
     //lungimea max 20 caractere
-    @Column(name="anul3")
+    @Column(name="anul3", length = 20)
     private String anul3;
 
     //lungimea max 20 caractere
-    @Column(name="anul4")
+    @Column(name="anul4", length = 20)
     private String anul4;
 
     //lungimea max 20 caractere
-    @Column(name="anul5")
+    @Column(name="anul5", length = 20)
     private String anul5;
 
     @Column(name="media")
@@ -107,11 +107,11 @@ public class Absolventi implements Serializable {
     private Integer pozpromotie;
 
     //lungimea max 30 caractere
-    @Column(name="prenume")
+    @Column(name="prenume", length = 30)
     private String prenume;
 
     //lungimea max 20 caractere
-    @Column(name="anfinal")
+    @Column(name="anfinal", length = 20)
     private String anfinal;
 
     @Column(name="iduniversitate")

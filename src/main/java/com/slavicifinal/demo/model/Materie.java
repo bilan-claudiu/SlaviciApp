@@ -19,31 +19,31 @@ public class Materie implements Serializable {
     private Long id;
 
     //lung. max 15 caract.
-    @Column(name="cod_mat")
+    @Column(name="cod_mat", length = 15)
     private String cod_mat;
 
     //lung. max 50 caract.
-    @Column(name="denum_mat")
+    @Column(name="denum_mat", length = 50)
     private String denum_mat;
 
     //lung. max 5 caract.
-    @Column(name="orecurs")
+    @Column(name="orecurs", length = 5)
     private String orecurs;
 
     //lung. max 5 caract.
-    @Column(name="oresem")
+    @Column(name="oresem", length = 5)
     private String oresem;
 
     //lung. max 5 caract.
-    @Column(name="orelab")
+    @Column(name="orelab", length = 5)
     private String orelab;
 
     //lung. max 5 caract.
-    @Column(name="orepgr")
+    @Column(name="orepgr", length = 5)
     private String orepgr;
 
     //lung. max 5 caract.
-    @Column(name="orepractica")
+    @Column(name="orepractica", length = 5)
     private String orepractica;
 
     @Column(name="iduser")

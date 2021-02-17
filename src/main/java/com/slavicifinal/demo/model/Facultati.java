@@ -19,19 +19,19 @@ public class Facultati implements Serializable {
     private Long id;
 
     //lung. max 50 caract.
-    @Column(name="nume")
+    @Column(name="nume", length = 50)
     private String nume;
 
     //lung. max 50 caract.
-    @Column(name="decan")
+    @Column(name="decan", length = 50)
     private String decan;
 
     //lung. max 50 caract.
-    @Column(name="prodecan1")
+    @Column(name="prodecan1", length = 50)
     private String prodecan1;
 
     //lung. max 50 caract.
-    @Column(name="secretar")
+    @Column(name="secretar", length = 50)
     private String secretar;
 
     @Column(name="iduser")

@@ -22,7 +22,7 @@ public class Specializari implements Serializable {
     private Long idfacultate;
 
     //lung. max 50 caract.
-    @Column(name="nume")
+    @Column(name="nume", length = 50)
     private String nume;
 
     @Column(name="iduser")
