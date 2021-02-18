@@ -11,7 +11,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "studenti")
+@Table(name = "student")
 public class Student implements Serializable {
 
     @Id
@@ -26,7 +26,6 @@ public class Student implements Serializable {
 
     @Column(name="prenume")
     private String prenume;
-
 
     @Column(name="specializare")
     private String specializare;
