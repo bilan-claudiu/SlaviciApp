@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.sql.Date;
+import java.sql.Time;
 
 @Data
 @NoArgsConstructor
@@ -31,19 +33,19 @@ public class Confani implements Serializable {
     private String specializare;
 
     @Column(name="anstudiu")
-    private Integer anstudiu;
+    private int anstudiu;
 
     @Column(name="semestru")
-    private Integer semestru;
+    private int semestru;
 
     @Column(name="tipdisciplina")
-    private Integer tipdisciplina;
+    private int tipdisciplina;
 
     @Column(name="formaex")
-    private Integer formaex;
+    private int formaex;
 
     @Column(name="credite")
-    private Integer credite;
+    private int credite;
 
     //ce functie apelez pentru "blob"????
     @Column(name="observatii")
@@ -54,9 +56,9 @@ public class Confani implements Serializable {
 
     //ce functie apelez pentru "time"????
     @Column(name="timemod")
-    private String timemod;
+    private Time timemod;
 
     //ce functie apelez pentru "data"????
     @Column(name="datamod")
-    private String datamod;
+    private Date datamod;
 }

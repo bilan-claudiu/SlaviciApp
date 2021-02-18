@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.sql.Date;
+import java.sql.Time;
 
 @Data
 @NoArgsConstructor
@@ -26,26 +28,26 @@ public class Note implements Serializable {
 
     //float(5.2)??
     @Column(name="notaf")
-    private Float notaf;
+    private float notaf;
 
     //float(5.2)??
     @Column(name="notaa")
-    private Float notaa;
+    private float notaa;
 
     //float(5.2)??
     @Column(name="notac")
-    private Float notac;
+    private float notac;
 
     @Column(name="iduser")
-    private Integer iduser;
+    private int iduser;
 
     //ce functie apelez pentru "time"????
     @Column(name="timemod")
-    private String timemod;
+    private Time timemod;
 
     //ce functie apelez pentru "data"????
     @Column(name="datamod")
-    private String datamod;
+    private Date datamod;
 
 
 }

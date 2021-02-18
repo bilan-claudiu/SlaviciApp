@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.sql.Date;
+
 
 @Data
 @NoArgsConstructor
@@ -45,7 +47,7 @@ public class Absolventi implements Serializable {
     private String mama;
 
     @Column(name="datanastere")
-    private String datanastere;
+    private Date datanastere;
 
     //lungimea max 35 de caractere
     @Column(name="locnastere", length = 35)
@@ -53,11 +55,11 @@ public class Absolventi implements Serializable {
 
     //lungimea max 15 caractere
     @Column(name="nr_mat", length = 15)
-    private String nr_mat;
+    private int nr_mat;
 
     //lungimea max 20 caractere
     @Column(name="an_volum", length = 20)
-    private String an_volum;
+    private int an_volum;
 
     //lungimea max 20 caractere
     @Column(name="cnp", length = 20)
@@ -69,7 +71,7 @@ public class Absolventi implements Serializable {
 
     //lungimea max 10 caractere
     @Column(name="volumul", length = 10)
-    private String volumul;
+    private short volumul;
 
     //lungimea max 20 caractere
     @Column(name="anul1", length = 20)
@@ -92,19 +94,19 @@ public class Absolventi implements Serializable {
     private String anul5;
 
     @Column(name="media")
-    private Float media;
+    private float media;
 
     @Column(name="sexul")
-    private Integer sexul;
+    private char sexul;
 
     @Column(name="credite")
-    private Integer credite;
+    private short credite;
 
     @Column(name="totalpromotie")
-    private Integer totalpromotie;
+    private int totalpromotie;
 
     @Column(name="pozpromotie")
-    private Integer pozpromotie;
+    private int pozpromotie;
 
     //lungimea max 30 caractere
     @Column(name="prenume", length = 30)
@@ -122,39 +124,39 @@ public class Absolventi implements Serializable {
     private String observatii;
 
     @Column(name="licenta")
-    private Float licenta;
+    private String licenta;
 
     //float(4.2)
     @Column(name="m1")
-    private Float m1;
+    private float m1;
 
     //float(4.2)
     @Column(name="m2")
-    private Float m2;
+    private float m2;
 
     //float(4.2)
     @Column(name="m3")
-    private Float m3;
+    private float m3;
 
     //float(4.2)
     @Column(name="m4")
-    private Float m4;
+    private float m4;
 
     //float(4.2)
     @Column(name="c1")
-    private Float c1;
+    private float c1;
 
     //float(4.2)
     @Column(name="c2")
-    private Float c2;
+    private float c2;
 
     //float(4.2)
     @Column(name="c3")
-    private Float c3;
+    private float c3;
 
     //float(4.2)
     @Column(name="c4")
-    private Float c4;
+    private float c4;
 
 
 
