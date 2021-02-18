@@ -20,6 +20,6 @@ public class Promotie implements Serializable {
 
     //lung max 50 caract.
     @Column(name="nume", length = 50)
-    private Integer nume;
+    private int nume;
 
 }

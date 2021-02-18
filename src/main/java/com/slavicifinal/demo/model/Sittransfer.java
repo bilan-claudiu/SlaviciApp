@@ -6,6 +6,9 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.sql.Time;
+import java.sql.Date;
+
 
 @Data
 @NoArgsConstructor
@@ -32,9 +35,9 @@ public class Sittransfer implements Serializable {
 
     //ce functie apelez pentru "time"????
     @Column(name="timemod")
-    private String timemod;
+    private Time timemod;
 
     //ce functie apelez pentru "data"????
     @Column(name="datamod")
-    private String datamod;
+    private Date datamod;
 }
