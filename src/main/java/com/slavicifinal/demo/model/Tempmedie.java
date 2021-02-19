@@ -33,39 +33,39 @@ public class Tempmedie implements Serializable{
 
     //int
     @Column(name="credite")
-    private Integer credite;
+    private int credite;
 
     //float(4,2)
     @Column(name="m1")
-    private Float m1;
+    private float m1;
 
     //float(4,2)
     @Column(name="m2")
-    private Float m2;
+    private float m2;
 
     //float(4,2)
     @Column(name="m3")
-    private Float m3;
+    private float m3;
 
     //float(4,2)
     @Column(name="m4")
-    private Float m4;
+    private float m4;
 
     //float(4,2)
     @Column(name="c1")
-    private Float c1;
+    private float c1;
 
     //float(4,2)
     @Column(name="c2")
-    private Float c2;
+    private float c2;
 
     //float(4,2)
     @Column(name="c3")
-    private Float c3;
+    private float c3;
 
     //float(4,2)
     @Column(name="c4")
-    private Float c4;
+    private float c4;
 
     //varchar(10)
     @Column(name="initiale", length = 10)

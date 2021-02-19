@@ -31,19 +31,19 @@ public class Tempnote implements Serializable{
 
     //float(5,2)
     @Column(name="notaf")
-    private Float notaf;
+    private float notaf;
 
     //float(5,2)
     @Column(name="notaa")
-    private Float notaa;
+    private float notaa;
 
     //float(5,2)
     @Column(name="notac")
-    private Float notac;
+    private float notac;
 
     //int
     @Column(name="iduser")
-    private Integer iduser;
+    private int iduser;
 
     //time
     @Column(name="timemod")

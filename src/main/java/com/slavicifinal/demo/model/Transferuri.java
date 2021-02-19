@@ -35,7 +35,7 @@ public class Transferuri implements Serializable{
 
     //int
     @Column(name="formaf")
-    private Integer formaf;
+    private int formaf;
 
     //varchar(3)
     @Column(name="idspecs", length = 3)
@@ -55,5 +55,5 @@ public class Transferuri implements Serializable{
 
     //int
     @Column(name="iduser")
-    private Integer iduser;
+    private int iduser;
 }

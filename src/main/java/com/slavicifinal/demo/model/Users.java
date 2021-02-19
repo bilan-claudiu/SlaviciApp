@@ -22,7 +22,7 @@ public class Users implements Serializable{
 
     //varchar 25
     @Column(name="user", length = 25)
-    private Integer user;
+    private String user;
 
     //varchar 25
     @Column(name="passwd", length = 25)
@@ -66,35 +66,35 @@ public class Users implements Serializable{
 
     //int
     @Column(name="viz_date")
-    private Boolean viz_date;
+    private int viz_date;
 
     //tinyint(1)
     @Column(name="intro_stud")
-    private Boolean intro_stud;
+    private short intro_stud;
 
     //tinyint(1)
     @Column(name="intro_note")
-    private Boolean intro_note;
+    private short intro_note;
 
     //tinyint(1)
     @Column(name="echivalari")
-    private Boolean echivalari;
+    private short echivalari;
 
     //tinyint(1)
     @Column(name="transfer")
-    private Boolean transfer;
+    private short transfer;
 
     //tinyint(1)
     @Column(name="citiredate")
-    private Boolean citiredate;
+    private short citiredate;
 
     //tinyint(1)
     @Column(name="intro_date_ani")
-    private Boolean intro_date_ani;
+    private short intro_date_ani;
 
     //int
     @Column(name="status")
-    private Integer status;
+    private int status;
 
     //date
     @Column(name="intro_date")

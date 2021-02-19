@@ -45,7 +45,7 @@ public class Universitati implements Serializable{
 
     //varchar(50)
     @Column(name="certificat", length = 50)
-    private Integer certificat;
+    private String certificat;
 
     //varchar(50)
     @Column(name="coperta", length = 50)
@@ -95,7 +95,7 @@ public class Universitati implements Serializable{
 
     //int
     @Column(name="specializarea")
-    private Integer specializarea;
+    private int specializarea;
 
     //varchar(50)
     @Column(name="numespec", length = 50)
@@ -103,5 +103,5 @@ public class Universitati implements Serializable{
 
     //varchar(50)
     @Column(name="numespecen", length = 50)
-    private Integer numespecen;
+    private String numespecen;
 }

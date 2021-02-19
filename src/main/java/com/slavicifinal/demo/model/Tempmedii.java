@@ -29,5 +29,5 @@ public class Tempmedii implements Serializable{
 
     //int
     @Column(name="credite")
-    private Integer credite;
+    private int credite;
 }

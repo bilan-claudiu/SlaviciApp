@@ -59,9 +59,9 @@ public class Student2 implements Serializable {
     @Column(name="jnastere",  length = 40)
     private String jnastere;
 
-    // int
+    // char
     @Column(name="sexul")
-    private Integer sexul;
+    private char sexul;
 
     // varchar(15)
     @Column(name="civila",  length = 15)
@@ -81,7 +81,7 @@ public class Student2 implements Serializable {
 
     // tinyint(1)
     @Column(name="stagiumilitar")
-    private Boolean stagiumilitar;
+    private short stagiumilitar;
 
     // varchar(40)
     @Column(name="etnie",  length = 40)
@@ -209,11 +209,11 @@ public class Student2 implements Serializable {
 
     // float(5,2)
     @Column(name="liceu_bac")
-    private Float liceu_bac;
+    private float liceu_bac;
 
     // float(5,2)
     @Column(name="liceu_media")
-    private Float liceu_media;
+    private float liceu_media;
 
     // varchar(25)
     @Column(name="univ_tara",  length = 25)
@@ -301,7 +301,7 @@ public class Student2 implements Serializable {
 
     // int
     @Column(name="forma")
-    private Integer forma;
+    private int forma;
 
     // varchar(25)
     @Column(name="anpregatitor", length = 25)
@@ -317,7 +317,7 @@ public class Student2 implements Serializable {
 
     // tinyint(1)
     @Column(name="exportweb")
-    private Boolean exportweb;
+    private short exportweb;
 
     // varchar(20)
     @Column(name="promotia",  length = 20)
@@ -353,5 +353,5 @@ public class Student2 implements Serializable {
 
     // int
     @Column(name="tipstudent")
-    private Integer tipstudent;
+    private int tipstudent;
 }
