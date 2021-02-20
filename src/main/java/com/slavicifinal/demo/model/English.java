@@ -18,13 +18,14 @@ public class English implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="idden")
+    @Column(name = "idden")
     private Long idden;
 
     //lung. max 20 caract.
-    @Column(name="tabel")
+    @Column(name = "tabel")
     private String tabel;
 
     //lung. max 100 caract.
-    @Column(name="traducere")
+    @Column(name = "traducere")
     private String traducere;
+}
