@@ -45,5 +45,13 @@ public class Facultati implements Serializable {
 
     //ce functie apelez pentru "data"????
     @Column(name="datamod")
+<<<<<<< HEAD
     private Date datamod;
+=======
+    private String datamod;
+
+    public Long getId() {
+        return id;
+    }
+>>>>>>> 79456c37de1a7ca6b72bd74d3525ea674988facd
 }
