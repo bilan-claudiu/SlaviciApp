@@ -6,8 +6,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Date;
-import java.sql.Time;
 
 @Data
 @NoArgsConstructor
@@ -21,19 +19,19 @@ public class Facultati implements Serializable {
     private Long id;
 
     //lung. max 50 caract.
-    @Column(name="nume", length = 50)
+    @Column(name="nume")
     private String nume;
 
     //lung. max 50 caract.
-    @Column(name="decan", length = 50)
+    @Column(name="decan")
     private String decan;
 
     //lung. max 50 caract.
-    @Column(name="prodecan1", length = 50)
+    @Column(name="prodecan1")
     private String prodecan1;
 
     //lung. max 50 caract.
-    @Column(name="secretar", length = 50)
+    @Column(name="secretar")
     private String secretar;
 
     @Column(name="iduser")
@@ -41,17 +39,13 @@ public class Facultati implements Serializable {
 
     //ce functie apelez pentru "time"????
     @Column(name="timemod")
-    private Time timemod;
+    private String timemod;
 
     //ce functie apelez pentru "data"????
     @Column(name="datamod")
-<<<<<<< HEAD
-    private Date datamod;
-=======
     private String datamod;
 
     public Long getId() {
         return id;
     }
->>>>>>> 79456c37de1a7ca6b72bd74d3525ea674988facd
 }
