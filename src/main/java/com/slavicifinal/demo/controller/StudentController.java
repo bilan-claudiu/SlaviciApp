@@ -40,37 +40,37 @@ public class StudentController {
     }
 
     @GetMapping("/cauta-iduser/{idUser}")
-    public ResponseEntity<Student> getStudentByIdUser(Long idUser) {
+    public ResponseEntity<Student> getStudentByIdUser(@PathVariable Long idUser) {
         Student student = studentService.getStudentByIduser(idUser);
         return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-cnp/{cnp}")
-    public ResponseEntity<Student> getStudentByCnp(String cnp) {
+    public ResponseEntity<Student> getStudentByCnp(@PathVariable String cnp) {
         Student student = studentService.getStudentByCnp(cnp);
         return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-nume/{nactual}")
-    public ResponseEntity<Student> getStudentByNume(String nactual) {
+    public ResponseEntity<Student> getStudentByNume(@PathVariable String nactual) {
         Student student = studentService.getStudentByNume(nactual);
         return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-serieId/{serieId}")
-    public ResponseEntity<Student> getStudentBySerieId(String serieId) {
+    public ResponseEntity<Student> getStudentBySerieId(@PathVariable String serieId) {
         Student student = studentService.getStudentBySerieId(serieId);
         return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-email/{email}")
-    public ResponseEntity<Student> getStudentByEmail(String email) {
+    public ResponseEntity<Student> getStudentByEmail(@PathVariable String email) {
         Student student = studentService.getStudentByEmail(email);
         return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-specializare/{specializare}")
-    public ResponseEntity<Student> getStudentByIdSpecializare(String specializare) {
+    public ResponseEntity<Student> getStudentByIdSpecializare(@PathVariable String specializare) {
         Student student = studentService.getStudentByIdSpecializare(specializare);
         return new ResponseEntity<>(student, HttpStatus.OK);
     }
@@ -87,7 +87,7 @@ public class StudentController {
         return new ResponseEntity<>(updateStudent, HttpStatus.OK);
     }
 
-    @PutMapping("/adauga-grup")
+    @PostMapping("/adauga-grup")
     public ResponseEntity<List<Student>> adaugaStudenti(@RequestBody List<Student> studenti) {
         List<Student> studentList = studentService.saveStudents(studenti);
         return new ResponseEntity<>(studentList, HttpStatus.CREATED);

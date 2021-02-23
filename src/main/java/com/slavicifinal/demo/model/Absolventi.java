@@ -167,6 +167,7 @@ public class Absolventi implements Serializable {
     @OneToOne(mappedBy = "absolventi")
     private Universitati universitati;
 
-
-
+    public Long getId() {
+        return id;
+    }
 }
