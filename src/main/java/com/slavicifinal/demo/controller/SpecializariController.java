@@ -14,8 +14,12 @@ import java.util.List;
 @RequestMapping("/specializare")
 public class SpecializariController {
 
+
+
     @Autowired
     private SpecializariService specializariService;
+
+
 
     @GetMapping()
     public ResponseEntity<List<Specializari>> getAllSpecializari() {
@@ -50,7 +54,7 @@ public class SpecializariController {
     @PostMapping("/new")
     public ResponseEntity<Specializari> adaugaSpecializare(@RequestBody Specializari specializare) {
         Specializari newSpecializare = specializariService.saveSpecializare(specializare);
-        return new ResponseEntity<>(newSpecializare, HttpStatus.OK);
+        return new ResponseEntity<>(newSpecializare, HttpStatus.CREATED);
     }
 
     @DeleteMapping("/delete/{id}")

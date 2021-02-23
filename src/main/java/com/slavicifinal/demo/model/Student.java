@@ -354,4 +354,9 @@ public class Student implements Serializable {
     // int
     @Column(name="tipstudent")
     private Integer tipstudent;
+
+
+    public Long getId() {
+        return id;
+    }
 }

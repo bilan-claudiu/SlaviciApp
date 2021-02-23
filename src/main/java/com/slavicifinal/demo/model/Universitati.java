@@ -3,6 +3,7 @@ package com.slavicifinal.demo.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.tomcat.jni.Address;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -104,4 +105,9 @@ public class Universitati implements Serializable{
     //varchar(50)
     @Column(name="numespecen", length = 50)
     private Integer numespecen;
+
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "iduniversitate")
+    private Absolventi absolventi;
 }
