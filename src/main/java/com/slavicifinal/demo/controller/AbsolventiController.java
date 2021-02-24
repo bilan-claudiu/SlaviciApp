@@ -1,7 +1,6 @@
 package com.slavicifinal.demo.controller;
 
 import com.slavicifinal.demo.model.Absolventi;
-import com.slavicifinal.demo.model.Student;
 import com.slavicifinal.demo.service.AbsolventiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
