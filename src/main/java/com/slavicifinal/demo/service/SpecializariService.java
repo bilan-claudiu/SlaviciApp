@@ -38,7 +38,7 @@ public class SpecializariService {
     }
 
    public void deleteSpecializareById ( Long id){
-        specializariRepository.deleteSpecializariById(id);
+        specializariRepository.deleteById(id);
    }
 
    public List<Specializari> getAllSpecializari (){

@@ -1,7 +1,7 @@
 package com.slavicifinal.demo.repository;
 
-import com.slavicifinal.demo.model.Facultati;
-import org.springframework.data.jpa.repository.JpaRepository;
+        import com.slavicifinal.demo.model.Facultati;
+        import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface FacultatiRepository extends JpaRepository<Facultati,Long> {
 
@@ -10,5 +10,5 @@ public interface FacultatiRepository extends JpaRepository<Facultati,Long> {
     Facultati findFacultatiByDecan ( String numeDecan);
     Facultati findFacultatiByProdecan1 ( String numeProdecan);
     Facultati findFacultatiByIduser ( Long idUser);
-    void deleteFacultatiById(Long id);
+    void deleteById(Long id);
 }

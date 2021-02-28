@@ -39,7 +39,7 @@ public class MaterieService {
     }
 
     public void deleteMaterieById(Long id) {
-        materieRepository.deleteMaterieById(id);
+        materieRepository.deleteById(id);
     }
 
 

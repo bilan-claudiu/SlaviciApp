@@ -20,7 +20,6 @@ public class SpecializariController {
     private SpecializariService specializariService;
 
 
-
     @GetMapping()
     public ResponseEntity<List<Specializari>> getAllSpecializari() {
         List<Specializari> specializari = specializariService.getAllSpecializari();
@@ -37,7 +36,6 @@ public class SpecializariController {
         Specializari specializare =  specializariService.getSpecializareById(id);
         return new ResponseEntity<Specializari>(specializare, HttpStatus.OK);
     }
-
 
     @GetMapping("/cauta-idFac/{id}")
     public ResponseEntity<Specializari> getSpecializareByIdFacultate( @PathVariable Long idFacultate){
@@ -62,6 +60,5 @@ public class SpecializariController {
         specializariService.deleteSpecializareById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-
 
 }

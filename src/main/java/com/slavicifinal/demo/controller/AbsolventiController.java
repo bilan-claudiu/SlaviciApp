@@ -62,10 +62,10 @@ public class AbsolventiController {
         return new ResponseEntity<>(absolventi, HttpStatus.OK);
     }
 
-    @PostMapping("adauga-absolvent")
+    @PostMapping("/adauga-absolvent")
     public ResponseEntity<Absolventi> adaugaAbsolvent(@RequestBody Absolventi absolvent) {
         Absolventi newabsolvent = absolventiService.saveAbsolvent(absolvent);
-        return new ResponseEntity<>(absolvent, HttpStatus.CREATED);
+        return new ResponseEntity<>(newabsolvent, HttpStatus.CREATED);
     }
 
     @PostMapping("/adauga-grup")
@@ -82,8 +82,7 @@ public class AbsolventiController {
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Absolventi> deleteAbsolventById(@PathVariable Long id) {
-        Absolventi absolvent = absolventiService.getAbsolventById(id);
-        absolventiService.deleteAbsolventById(absolvent.getId());
+        absolventiService.deleteAbsolventById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 

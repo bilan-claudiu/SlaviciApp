@@ -27,7 +27,7 @@ public class StudentController {
         return new ResponseEntity<>(students, HttpStatus.OK);
     }
 
-    @GetMapping("/promotia")
+    @GetMapping("/promotia/{promotia}")
     public ResponseEntity<List<Student>> getAllStudentsByPromotie(@PathVariable String promotie) {
         List<Student> studentsBypromotie = studentService.getStudentsByPromotie(promotie);
         return new ResponseEntity<>(studentsBypromotie, HttpStatus.OK);
@@ -92,10 +92,10 @@ public class StudentController {
         List<Student> studentList = studentService.saveStudents(studenti);
         return new ResponseEntity<>(studentList, HttpStatus.CREATED);
     }
+
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Student> deleteStudentById(@PathVariable Long id) {
-        Student student = studentService.getStudentById(id);
-        studentService.deleteStudentById(student.getId());
+        studentService.deleteStudentById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 

@@ -13,5 +13,5 @@ public interface AbsolventiRepository extends JpaRepository<Absolventi, Long> {
     Absolventi findAbsolventiByIdpromotie(Long idpromotie);
     Absolventi findAbsolventiByNume(String nume);
     List<Absolventi> findAbsolventisByPromotia(String promotie);
-    void deleteAbsolventiById(Long id);
+     void deleteById(Long id);
 }

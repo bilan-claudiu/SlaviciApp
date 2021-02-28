@@ -48,7 +48,7 @@ public class FacultatiService {
     }
 
     public void deleteFacultateById(Long id) {
-        facultatiRepository.deleteFacultatiById(id);
+        facultatiRepository.deleteById(id);
     }
 
     public List<Facultati> getAllFacultati() {

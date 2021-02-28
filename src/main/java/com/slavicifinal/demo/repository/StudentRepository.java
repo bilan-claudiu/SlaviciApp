@@ -17,5 +17,7 @@ public interface StudentRepository extends JpaRepository<Student,Long> {
     Student findStudentByIdspecializare(String specializare);
     List<Student> findStudentsByPromotia(String promotie);
 
-    void  deleteStudentById (Long id);
+void deleteById(Long id);
+
+
 }

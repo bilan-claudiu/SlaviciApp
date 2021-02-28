@@ -24,33 +24,33 @@ public class FacultatiController {
     }
 
     @GetMapping("/cauta-numeFac/{nume}")
-    public ResponseEntity<Facultati> getFacultateByNume(@PathVariable String nume){
-        Facultati facultate =  facultatiService.getfacultateByNume(nume);
-        return new ResponseEntity<>(facultate,HttpStatus.OK);
+    public ResponseEntity<Facultati> getFacultateByNume(@PathVariable String nume) {
+        Facultati facultate = facultatiService.getfacultateByNume(nume);
+        return new ResponseEntity<>(facultate, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-nume-decan /{numeDecan}")
-    public ResponseEntity<Facultati> getFacultateByDecan(@PathVariable String numeDecan){
-        Facultati facultate =  facultatiService.getfacultateByDecan(numeDecan);
-        return new ResponseEntity<>(facultate,HttpStatus.OK);
+    public ResponseEntity<Facultati> getFacultateByDecan(@PathVariable String numeDecan) {
+        Facultati facultate = facultatiService.getfacultateByDecan(numeDecan);
+        return new ResponseEntity<>(facultate, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-nume-prodecan /{prodecan}")
-    public ResponseEntity<Facultati> getFacultateByProdecan(@PathVariable String prodecan){
-        Facultati facultate =  facultatiService.getfacultateByProdecan(prodecan);
-        return new ResponseEntity<>(facultate,HttpStatus.OK);
+    public ResponseEntity<Facultati> getFacultateByProdecan(@PathVariable String prodecan) {
+        Facultati facultate = facultatiService.getfacultateByProdecan(prodecan);
+        return new ResponseEntity<>(facultate, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-idFac/{id}")
-    public ResponseEntity<Facultati> getFacultateById(@PathVariable Long id){
-        Facultati facultate =  facultatiService.getfacultateById(id);
-        return new ResponseEntity<>(facultate,HttpStatus.OK);
+    public ResponseEntity<Facultati> getFacultateById(@PathVariable Long id) {
+        Facultati facultate = facultatiService.getfacultateById(id);
+        return new ResponseEntity<>(facultate, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-idUser /{idUser}")
-    public ResponseEntity<Facultati> getFacultateByIdUser(@PathVariable Long idUser){
-        Facultati facultate =  facultatiService.getfacultateByIdUser(idUser);
-        return new ResponseEntity<>(facultate,HttpStatus.OK);
+    public ResponseEntity<Facultati> getFacultateByIdUser(@PathVariable Long idUser) {
+        Facultati facultate = facultatiService.getfacultateByIdUser(idUser);
+        return new ResponseEntity<>(facultate, HttpStatus.OK);
     }
 
     @PostMapping("/adauga-facultate")
@@ -58,11 +58,13 @@ public class FacultatiController {
         Facultati newFacultate = facultatiService.saveFacultate(facultate);
         return new ResponseEntity<>(newFacultate, HttpStatus.CREATED);
     }
+
     @PutMapping("/update-faculate")
     public ResponseEntity<Facultati> updateFacultate(@RequestBody Facultati facultate) {
         Facultati newFacultate = facultatiService.saveFacultate(facultate);
         return new ResponseEntity<>(newFacultate, HttpStatus.OK);
     }
+
     @PostMapping("/adauga-facultati")
     public ResponseEntity<List<Facultati>> addNewStudents(@RequestBody List<Facultati> facultatiList) {
         List<Facultati> facultati = facultatiService.saveFacultati(facultatiList);
@@ -71,8 +73,7 @@ public class FacultatiController {
 
     @DeleteMapping("/delete-facultate/{id}")
     public ResponseEntity<Facultati> deleteFacultateById(@PathVariable Long id) {
-        Facultati facultate = facultatiService.getfacultateById(id);
-        facultatiService.deleteFacultateById(facultate.getId());
+        facultatiService.deleteFacultateById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
