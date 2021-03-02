@@ -51,6 +51,8 @@ public class FacultatiService {
         facultatiRepository.deleteById(id);
     }
 
+
+
     public List<Facultati> getAllFacultati() {
         return facultatiRepository.findAll();
     }

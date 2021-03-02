@@ -37,7 +37,7 @@ public class SpecializariController {
         return new ResponseEntity<Specializari>(specializare, HttpStatus.OK);
     }
 
-    @GetMapping("/cauta-idFac/{id}")
+    @GetMapping("/cauta-idFac/{idFacultate}")
     public ResponseEntity<Specializari> getSpecializareByIdFacultate( @PathVariable Long idFacultate){
         Specializari specializare =  specializariService.getSpecializariByIdFacultate(idFacultate);
         return new ResponseEntity<Specializari>(specializare, HttpStatus.OK);

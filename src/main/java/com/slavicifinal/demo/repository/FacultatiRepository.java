@@ -10,5 +10,6 @@ public interface FacultatiRepository extends JpaRepository<Facultati,Long> {
     Facultati findFacultatiByDecan ( String numeDecan);
     Facultati findFacultatiByProdecan1 ( String numeProdecan);
     Facultati findFacultatiByIduser ( Long idUser);
+
     void deleteById(Long id);
 }

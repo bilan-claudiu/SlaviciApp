@@ -28,14 +28,14 @@ public class StudentController {
     }
 
     @GetMapping("/promotia/{promotia}")
-    public ResponseEntity<List<Student>> getAllStudentsByPromotie(@PathVariable String promotie) {
-        List<Student> studentsBypromotie = studentService.getStudentsByPromotie(promotie);
+    public ResponseEntity<List<Student>> getAllStudentsByPromotie(@PathVariable String promotia) {
+        List<Student> studentsBypromotie = studentService.getStudentsByPromotie(promotia);
         return new ResponseEntity<>(studentsBypromotie, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-id/{id}")
-    public ResponseEntity<Student> getStudentById(@PathVariable Long Id) {
-        Student student = studentService.getStudentById(Id);
+    public ResponseEntity<Student> getStudentById(@PathVariable Long id) {
+        Student student = studentService.getStudentById(id);
         return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
