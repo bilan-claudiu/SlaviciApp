@@ -1,6 +1,5 @@
 package com.slavicifinal.demo.controller;
 
-
 import com.slavicifinal.demo.model.Student;
 import com.slavicifinal.demo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +13,13 @@ import java.util.List;
 @RequestMapping("/student")
 public class StudentController {
 
-
-    private StudentService studentService;
+    private final StudentService studentService;
 
     @Autowired
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
+
 
     @GetMapping()
     public ResponseEntity<List<Student>> getAllStudents() {
@@ -28,17 +27,10 @@ public class StudentController {
         return new ResponseEntity<>(students, HttpStatus.OK);
     }
 
-
-    @GetMapping("/cauta-nume/{name}")
-    public ResponseEntity<Student> getStudentByName(@PathVariable String name) {
-        Student student = studentService.getStudentByName(name);
-        return new ResponseEntity<>(student, HttpStatus.OK);
-    }
-
-    @GetMapping("/cauta-CNP/{CNP}")
-    public ResponseEntity<Student> getStudentByCNP(@PathVariable Long CNP) {
-        Student newStudent = studentService.getStudentByCNP(CNP);
-        return new ResponseEntity<>(newStudent, HttpStatus.OK);
+    @GetMapping("/promotia/{promotia}")
+    public ResponseEntity<List<Student>> getAllStudentsByPromotie(@PathVariable String promotia) {
+        List<Student> studentsBypromotie = studentService.getStudentsByPromotie(promotia);
+        return new ResponseEntity<>(studentsBypromotie, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-id/{id}")
@@ -47,42 +39,64 @@ public class StudentController {
         return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
+    @GetMapping("/cauta-iduser/{idUser}")
+    public ResponseEntity<Student> getStudentByIdUser(@PathVariable Long idUser) {
+        Student student = studentService.getStudentByIduser(idUser);
+        return new ResponseEntity<>(student, HttpStatus.OK);
+    }
+
+    @GetMapping("/cauta-cnp/{cnp}")
+    public ResponseEntity<Student> getStudentByCnp(@PathVariable String cnp) {
+        Student student = studentService.getStudentByCnp(cnp);
+        return new ResponseEntity<>(student, HttpStatus.OK);
+    }
+
+    @GetMapping("/cauta-nume/{nactual}")
+    public ResponseEntity<Student> getStudentByNume(@PathVariable String nactual) {
+        Student student = studentService.getStudentByNume(nactual);
+        return new ResponseEntity<>(student, HttpStatus.OK);
+    }
+
+    @GetMapping("/cauta-serieId/{serieId}")
+    public ResponseEntity<Student> getStudentBySerieId(@PathVariable String serieId) {
+        Student student = studentService.getStudentBySerieId(serieId);
+        return new ResponseEntity<>(student, HttpStatus.OK);
+    }
+
+    @GetMapping("/cauta-email/{email}")
+    public ResponseEntity<Student> getStudentByEmail(@PathVariable String email) {
+        Student student = studentService.getStudentByEmail(email);
+        return new ResponseEntity<>(student, HttpStatus.OK);
+    }
+
+    @GetMapping("/cauta-specializare/{specializare}")
+    public ResponseEntity<Student> getStudentByIdSpecializare(@PathVariable String specializare) {
+        Student student = studentService.getStudentByIdSpecializare(specializare);
+        return new ResponseEntity<>(student, HttpStatus.OK);
+    }
+
     @PostMapping("/adauga-student")
-    public ResponseEntity<Student> addNewStudent(@RequestBody Student student) {
+    public ResponseEntity<Student> adaugaStudent(@RequestBody Student student) {
         Student newStudent = studentService.saveStudent(student);
-        return new ResponseEntity<>(student, HttpStatus.CREATED);
+        return new ResponseEntity<>(newStudent, HttpStatus.CREATED);
+    }
+
+    @PutMapping("/update-student")
+    public ResponseEntity<Student> updateStudent(@RequestBody Student student) {
+        Student updateStudent = studentService.saveStudent(student);
+        return new ResponseEntity<>(updateStudent, HttpStatus.OK);
     }
 
     @PostMapping("/adauga-grup")
-    public ResponseEntity<List<Student>> addNewStudents(@RequestBody List<Student> studentList) {
-        List<Student> students = studentService.saveStudenti(studentList);
-        return new ResponseEntity<>(students, HttpStatus.CREATED);
+    public ResponseEntity<List<Student>> adaugaStudenti(@RequestBody List<Student> studenti) {
+        List<Student> studentList = studentService.saveStudents(studenti);
+        return new ResponseEntity<>(studentList, HttpStatus.CREATED);
     }
-
-    @PutMapping("/update")
-    public ResponseEntity<Student> updateStudent(@RequestBody Student student) {
-        Student newStudent = studentService.saveStudent(student);
-        return new ResponseEntity<>(newStudent, HttpStatus.OK);
-    }
-
-    @PatchMapping("/modify")
-    public ResponseEntity<Student> modifyStudent(@RequestBody Student student) {
-        Student newStudent = studentService.saveStudent(student);
-        return new ResponseEntity<>(newStudent, HttpStatus.OK);
-    }
-
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Student> deleteStudentById(@PathVariable("id") Long id) {
-        studentService.deleteById(id);
+    public ResponseEntity<Student> deleteStudentById(@PathVariable Long id) {
+        studentService.deleteStudentById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @DeleteMapping("/delete-cnp/{CNP}")
-    public ResponseEntity<Student> deleteStudentByCNP(@PathVariable Long CNP) {
-        Student foundResult = studentService.getStudentByCNP(CNP);
-        studentService.deleteById(foundResult.getId());
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
 }
-

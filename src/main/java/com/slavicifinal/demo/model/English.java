@@ -22,6 +22,7 @@ public class English implements Serializable {
     private Long idden;
 
     //lung. max 20 caract.
+<<<<<<< HEAD
     @Column(name = "tabel", length = 20)
     private String tabel;
 
@@ -29,3 +30,12 @@ public class English implements Serializable {
     @Column(name = "traducere", length = 100)
     private String traducere;
 }
+=======
+    @Column(name = "tabel")
+    private String tabel;
+
+    //lung. max 100 caract.
+    @Column(name = "traducere")
+    private String traducere;
+}
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad

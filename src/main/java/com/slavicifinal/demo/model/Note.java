@@ -48,4 +48,9 @@ public class Note implements Serializable {
     //ce functie apelez pentru "data"????
     @Column(name="datamod")
     private Date datamod;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 }

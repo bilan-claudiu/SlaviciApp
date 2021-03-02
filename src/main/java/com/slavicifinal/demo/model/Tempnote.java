@@ -31,6 +31,7 @@ public class Tempnote implements Serializable{
 
     //float(5,2)
     @Column(name="notaf")
+<<<<<<< HEAD
     private float notaf;
 
     //float(5,2)
@@ -44,6 +45,21 @@ public class Tempnote implements Serializable{
     //int
     @Column(name="iduser")
     private int iduser;
+=======
+    private Float notaf;
+
+    //float(5,2)
+    @Column(name="notaa")
+    private Float notaa;
+
+    //float(5,2)
+    @Column(name="notac")
+    private Float notac;
+
+    //int
+    @Column(name="iduser")
+    private Integer iduser;
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 
     //time
     @Column(name="timemod")

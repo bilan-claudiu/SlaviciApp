@@ -3,6 +3,10 @@ package com.slavicifinal.demo.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+<<<<<<< HEAD
+=======
+import org.apache.tomcat.jni.Address;
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -45,7 +49,11 @@ public class Universitati implements Serializable{
 
     //varchar(50)
     @Column(name="certificat", length = 50)
+<<<<<<< HEAD
     private String certificat;
+=======
+    private Integer certificat;
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 
     //varchar(50)
     @Column(name="coperta", length = 50)
@@ -95,7 +103,11 @@ public class Universitati implements Serializable{
 
     //int
     @Column(name="specializarea")
+<<<<<<< HEAD
     private int specializarea;
+=======
+    private Integer specializarea;
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 
     //varchar(50)
     @Column(name="numespec", length = 50)
@@ -103,5 +115,14 @@ public class Universitati implements Serializable{
 
     //varchar(50)
     @Column(name="numespecen", length = 50)
+<<<<<<< HEAD
     private String numespecen;
+=======
+    private Integer numespecen;
+
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "iduniversitate")
+    private Absolventi absolventi;
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 }

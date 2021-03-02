@@ -61,9 +61,15 @@ public class Studentp implements Serializable{
     @Column(name="jnastere", length = 40)
     private String jnastere;
 
+<<<<<<< HEAD
     //char
     @Column(name="sexul")
     private char sexul;
+=======
+    //int
+    @Column(name="sexul")
+    private int sexul;
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 
     //varchar(15)
     @Column(name="civila", length = 15)
@@ -83,7 +89,11 @@ public class Studentp implements Serializable{
 
     //tinyint(1)
     @Column(name="stagiumilitar")
+<<<<<<< HEAD
     private short stagiumilitar;
+=======
+    private Boolean stagiumilitar;
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 
     //varchar(40)
     @Column(name="etnie", length = 40)
@@ -211,6 +221,7 @@ public class Studentp implements Serializable{
 
     // float(5,2)
     @Column(name="liceu_bac")
+<<<<<<< HEAD
     private float liceu_bac;
 
     // float(5,2)
@@ -220,6 +231,17 @@ public class Studentp implements Serializable{
     // varchar(25)
     @Column(name="univ_tara", length = 25)
     private float univ_tara;
+=======
+    private Float liceu_bac;
+
+    // float(5,2)
+    @Column(name="liceu_media")
+    private Float liceu_media;
+
+    // varchar(25)
+    @Column(name="univ_tara", length = 25)
+    private String univ_tara;
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 
     // varchar(25)
     @Column(name="univ_localit", length = 25)
@@ -302,8 +324,13 @@ public class Studentp implements Serializable{
     private String idspecializare;
 
     // int
+<<<<<<< HEAD
     @Column(name="forma", length = 30)
     private int forma;
+=======
+    @Column(name="forma")
+    private Integer forma;
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 
     // varchar(25)
     @Column(name="anpregatitor", length = 25)
@@ -319,7 +346,11 @@ public class Studentp implements Serializable{
 
     // tinyint(1)
     @Column(name="exportweb")
+<<<<<<< HEAD
     private short exportweb;
+=======
+    private Boolean exportweb;
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 
     // varchar(20)
     @Column(name="promotia", length = 20)
@@ -335,7 +366,11 @@ public class Studentp implements Serializable{
 
     // bigint
     @Column(name="iduser")
+<<<<<<< HEAD
     private long iduser;
+=======
+    private Long iduser;
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 
     // date
     @Column(name="datamod")
@@ -347,6 +382,10 @@ public class Studentp implements Serializable{
 
     //int
     @Column(name="tipstudent")
+<<<<<<< HEAD
     private int tipstudent;
+=======
+    private Integer tipstudent;
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 
 }

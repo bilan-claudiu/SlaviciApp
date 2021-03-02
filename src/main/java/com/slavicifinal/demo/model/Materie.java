@@ -58,4 +58,11 @@ public class Materie implements Serializable {
     //ce functie apelez pentru "data"????
     @Column(name="datamod")
     private Date datamod;
+<<<<<<< HEAD
+=======
+
+    public Long getId() {
+        return id;
+    }
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 }

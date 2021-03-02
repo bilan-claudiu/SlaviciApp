@@ -33,6 +33,7 @@ public class Tempmedie implements Serializable{
 
     //int
     @Column(name="credite")
+<<<<<<< HEAD
     private int credite;
 
     //float(4,2)
@@ -66,6 +67,41 @@ public class Tempmedie implements Serializable{
     //float(4,2)
     @Column(name="c4")
     private float c4;
+=======
+    private Integer credite;
+
+    //float(4,2)
+    @Column(name="m1")
+    private Float m1;
+
+    //float(4,2)
+    @Column(name="m2")
+    private Float m2;
+
+    //float(4,2)
+    @Column(name="m3")
+    private Float m3;
+
+    //float(4,2)
+    @Column(name="m4")
+    private Float m4;
+
+    //float(4,2)
+    @Column(name="c1")
+    private Float c1;
+
+    //float(4,2)
+    @Column(name="c2")
+    private Float c2;
+
+    //float(4,2)
+    @Column(name="c3")
+    private Float c3;
+
+    //float(4,2)
+    @Column(name="c4")
+    private Float c4;
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 
     //varchar(10)
     @Column(name="initiale", length = 10)

@@ -1,8 +1,11 @@
 package com.slavicifinal.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.apache.tomcat.jni.Address;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -157,4 +160,17 @@ public class Absolventi implements Serializable {
     //float(4.2)
     @Column(name="c4")
     private float c4;
+<<<<<<< HEAD
+=======
+
+
+    @ToString.Exclude
+    @JsonIgnore
+    @OneToOne(mappedBy = "absolventi")
+    private Universitati universitati;
+
+    public Long getId() {
+        return id;
+    }
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 }

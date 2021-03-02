@@ -29,5 +29,9 @@ public class Tempmedii implements Serializable{
 
     //int
     @Column(name="credite")
+<<<<<<< HEAD
     private int credite;
+=======
+    private Integer credite;
+>>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
 }
