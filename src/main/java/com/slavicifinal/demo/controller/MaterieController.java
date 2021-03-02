@@ -26,14 +26,14 @@ public class MaterieController {
         return new ResponseEntity<>(materiiList, HttpStatus.OK);
     }
 
-    @GetMapping("cauta-id/{id}")
+    @GetMapping("/cauta-id/{id}")
     public ResponseEntity<Materie> getMaterieById(@PathVariable Long id) {
         Materie materie = materieService.getMaterieById(id);
         return new ResponseEntity<>(materie, HttpStatus.OK);
     }
 
 
-    @GetMapping("cauta-idUser/{idUser}")
+    @GetMapping("/cauta-idUser/{idUser}")
     public ResponseEntity<Materie> getMaterieByIdUser(@PathVariable Long idUser) {
         Materie materie = materieService.getMaterieByIdUser(idUser);
         return new ResponseEntity<>(materie, HttpStatus.OK);

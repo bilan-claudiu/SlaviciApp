@@ -61,7 +61,7 @@ public class Student implements Serializable {
 
     // int
     @Column(name="sexul")
-    private Integer sexul;
+    private int sexul;
 
     // varchar(15)
     @Column(name="civila",  length = 15)

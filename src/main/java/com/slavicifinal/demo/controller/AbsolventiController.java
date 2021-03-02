@@ -26,15 +26,9 @@ public class AbsolventiController {
         return new ResponseEntity<>(absolvents, HttpStatus.OK);
     }
 
-    @GetMapping("/cauta-id/{id}")
+    @GetMapping("/cauta-id{i/d}")
     public ResponseEntity<Absolventi> getAbsolventById(@PathVariable Long id) {
         Absolventi absolvent = absolventiService.getAbsolventById(id);
-        return new ResponseEntity<>(absolvent, HttpStatus.OK);
-    }
-
-    @GetMapping("/cauta-proomotia/{promotia}")
-    public ResponseEntity<Absolventi> getAbsolventByPromotia(@PathVariable String promotia) {
-        Absolventi absolvent = absolventiService.getAbsolventByPromotia(promotia);
         return new ResponseEntity<>(absolvent, HttpStatus.OK);
     }
 
@@ -56,16 +50,16 @@ public class AbsolventiController {
         return new ResponseEntity<>(absolvent, HttpStatus.OK);
     }
 
-    @GetMapping("cauta-absolventi-promotia/{promotia}")
+    @GetMapping("/cauta-absolventi-promotia/{promotia}")
     public ResponseEntity<List<Absolventi>> getAbsolventiByPromotie(@PathVariable String promotia) {
         List<Absolventi> absolventi = absolventiService.getAbsolventiListByPromotie(promotia);
         return new ResponseEntity<>(absolventi, HttpStatus.OK);
     }
 
-    @PostMapping("adauga-absolvent")
+    @PostMapping("/adauga-absolvent")
     public ResponseEntity<Absolventi> adaugaAbsolvent(@RequestBody Absolventi absolvent) {
         Absolventi newabsolvent = absolventiService.saveAbsolvent(absolvent);
-        return new ResponseEntity<>(absolvent, HttpStatus.CREATED);
+        return new ResponseEntity<>(newabsolvent, HttpStatus.CREATED);
     }
 
     @PostMapping("/adauga-grup")
@@ -82,8 +76,8 @@ public class AbsolventiController {
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Absolventi> deleteAbsolventById(@PathVariable Long id) {
-        Absolventi absolvent = absolventiService.getAbsolventById(id);
-        absolventiService.deleteAbsolventById(absolvent.getId());
+
+        absolventiService.deleteAbsolventById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 

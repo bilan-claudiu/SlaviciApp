@@ -1,7 +1,6 @@
 package com.slavicifinal.demo.service;
 
 import com.slavicifinal.demo.model.Absolventi;
-import com.slavicifinal.demo.model.Student;
 import com.slavicifinal.demo.repository.AbsolventiRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -55,7 +54,7 @@ public class AbsolventiService {
     }
 
     public void deleteAbsolventById(Long id) {
-        absolventiRepository.deleteAbsolventiById(id);
+        absolventiRepository.deleteById(id);
     }
 
 }
