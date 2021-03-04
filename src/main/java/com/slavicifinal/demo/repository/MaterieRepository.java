@@ -7,6 +7,7 @@ public interface MaterieRepository extends JpaRepository<Materie,Long>{
 
     Materie findMaterieById(Long id);
     Materie findMaterieByIduser(Long id);
-    void deleteMaterieById(Long id);
+    void deleteById(Long id);
+
 
 }

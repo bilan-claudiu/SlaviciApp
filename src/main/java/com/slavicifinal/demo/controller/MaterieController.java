@@ -1,5 +1,7 @@
 package com.slavicifinal.demo.controller;
 
+import com.slavicifinal.demo.model.Absolventi;
+import com.slavicifinal.demo.model.Facultati;
 import com.slavicifinal.demo.model.Materie;
 import com.slavicifinal.demo.service.MaterieService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,9 +52,9 @@ public class MaterieController {
         return new ResponseEntity<>(materieList, HttpStatus.CREATED);
     }
 
-    @PutMapping("/update-materie")
-    public ResponseEntity<Materie> updateMaterie(@RequestBody Materie materie) {
-        Materie updateMaterie = materieService.saveMaterie(materie);
+    @PutMapping("/update-materie/{id}")
+    public ResponseEntity<Materie> updateMaterie(@RequestBody Materie materie, @PathVariable Long id) {
+        Materie updateMaterie = materieService.updateMaterie(materie, id);
         return new ResponseEntity<>(updateMaterie, HttpStatus.OK);
     }
 
@@ -61,4 +63,6 @@ public class MaterieController {
         materieService.deleteMaterieById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+
 }

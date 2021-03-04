@@ -43,4 +43,15 @@ public class MaterieService {
     }
 
 
+    public Materie updateMaterie(Materie newMaterie,  Long id) {
+        return materieRepository.findById(id).map(materie -> {
+            materie.setCod_mat(newMaterie.getCod_mat());
+            materie.setDenum_mat(newMaterie.getDenum_mat());
+            return materieRepository.save(materie);
+        }).orElseGet(() -> {
+            newMaterie.setId(id);
+            return materieRepository.save(newMaterie);
+        });
+    }
+
 }

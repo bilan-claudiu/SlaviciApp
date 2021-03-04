@@ -59,7 +59,88 @@ public class Materie implements Serializable {
     @Column(name="datamod")
     private Date datamod;
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getCod_mat() {
+        return cod_mat;
+    }
+
+    public void setCod_mat(String cod_mat) {
+        this.cod_mat = cod_mat;
+    }
+
+    public String getDenum_mat() {
+        return denum_mat;
+    }
+
+    public void setDenum_mat(String denum_mat) {
+        this.denum_mat = denum_mat;
+    }
+
+    public String getOrecurs() {
+        return orecurs;
+    }
+
+    public void setOrecurs(String orecurs) {
+        this.orecurs = orecurs;
+    }
+
+    public String getOresem() {
+        return oresem;
+    }
+
+    public void setOresem(String oresem) {
+        this.oresem = oresem;
+    }
+
+    public String getOrelab() {
+        return orelab;
+    }
+
+    public void setOrelab(String orelab) {
+        this.orelab = orelab;
+    }
+
+    public String getOrepgr() {
+        return orepgr;
+    }
+
+    public void setOrepgr(String orepgr) {
+        this.orepgr = orepgr;
+    }
+
+    public String getOrepractica() {
+        return orepractica;
+    }
+
+    public void setOrepractica(String orepractica) {
+        this.orepractica = orepractica;
+    }
+
+    public Long getIduser() {
+        return iduser;
+    }
+
+    public void setIduser(Long iduser) {
+        this.iduser = iduser;
+    }
+
+
+    public Date getDatamod() {
+        return datamod;
+    }
+
+    public void setDatamod(Date datamod) {
+        this.datamod = datamod;
+    }
+
     public Long getId() {
         return id;
+
+
+
+
     }
 }
