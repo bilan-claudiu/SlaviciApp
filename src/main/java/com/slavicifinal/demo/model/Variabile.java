@@ -24,4 +24,20 @@ public class Variabile implements Serializable {
     // varchar 30
     @Column(name="value", length = 30)
     private String value;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
 }
