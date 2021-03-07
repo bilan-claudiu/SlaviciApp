@@ -1,7 +1,10 @@
 package com.slavicifinal.demo.repository;
 
 import com.slavicifinal.demo.model.Absolventi;
+<<<<<<< HEAD
 import com.slavicifinal.demo.model.Student;
+=======
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -33,7 +33,11 @@ public class StudentController {
         return new ResponseEntity<>(studentsBypromotie, HttpStatus.OK);
     }
 
+<<<<<<< HEAD
     @GetMapping("/cauta-id/{id}")
+=======
+    @GetMapping("/cauta/{id}")
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
     public ResponseEntity<Student> getStudentById(@PathVariable Long id) {
         Student student = studentService.getStudentById(id);
         return new ResponseEntity<>(student, HttpStatus.OK);
@@ -75,6 +79,7 @@ public class StudentController {
         return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
+<<<<<<< HEAD
     @PostMapping("/adauga-student")
     public ResponseEntity<Student> adaugaStudent(@RequestBody Student student) {
         Student newStudent = studentService.saveStudent(student);
@@ -99,4 +104,30 @@ public class StudentController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+=======
+    @PostMapping("/adauga")
+    public ResponseEntity<Student> adaugaStudent(@RequestBody Student student) {
+        Student newStudent = studentService.saveStudent(student);
+        return new ResponseEntity<>(newStudent, HttpStatus.CREATED);
+    }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Student> updateStudent(@RequestBody Student student, @PathVariable Long id) {
+        Student updateStudent = studentService.updateStudent(student,id);
+        return new ResponseEntity<>(updateStudent, HttpStatus.OK);
+    }
+
+    @PostMapping("/adauga-grup")
+    public ResponseEntity<List<Student>> adaugaStudenti(@RequestBody List<Student> studenti) {
+        List<Student> studentList = studentService.saveStudents(studenti);
+        return new ResponseEntity<>(studentList, HttpStatus.CREATED);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Student> deleteStudentById(@PathVariable Long id) {
+        studentService.deleteStudentById(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
 }

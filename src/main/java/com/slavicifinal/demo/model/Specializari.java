@@ -38,4 +38,35 @@ public class Specializari implements Serializable {
     @Column(name="datamod")
     private Date datamod;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getIdfacultate() {
+        return idfacultate;
+    }
+
+    public void setIdfacultate(Long idfacultate) {
+        this.idfacultate = idfacultate;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public Long getIduser() {
+        return iduser;
+    }
+
+    public void setIduser(Long iduser) {
+        this.iduser = iduser;
+    }
 }

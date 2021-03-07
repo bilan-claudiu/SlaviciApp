@@ -1,5 +1,9 @@
 package com.slavicifinal.demo.service;
 
+<<<<<<< HEAD
+=======
+import com.slavicifinal.demo.model.Absolventi;
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
 import com.slavicifinal.demo.model.Facultati;
 import com.slavicifinal.demo.repository.FacultatiRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,9 +56,27 @@ public class FacultatiService {
     }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
     public List<Facultati> getAllFacultati() {
         return facultatiRepository.findAll();
     }
 
+<<<<<<< HEAD
+=======
+    public Facultati updateFacultate(Facultati newFacultate, Long id) {
+        return facultatiRepository.findById(id).map(facultati -> {
+            facultati.setIduser(newFacultate.getIduser());
+
+            return facultatiRepository.save(facultati);
+        }).orElseGet(() -> {
+            newFacultate.setId(id);
+            return facultatiRepository.save(newFacultate);
+        });
+    }
+
+
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
 }

@@ -4,9 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import org.apache.tomcat.jni.Address;
 >>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
+=======
+import org.apache.tomcat.jni.Address;
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -50,10 +54,14 @@ public class Universitati implements Serializable{
     //varchar(50)
     @Column(name="certificat", length = 50)
 <<<<<<< HEAD
+<<<<<<< HEAD
     private String certificat;
 =======
     private Integer certificat;
 >>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
+=======
+    private Integer certificat;
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
 
     //varchar(50)
     @Column(name="coperta", length = 50)
@@ -104,10 +112,14 @@ public class Universitati implements Serializable{
     //int
     @Column(name="specializarea")
 <<<<<<< HEAD
+<<<<<<< HEAD
     private int specializarea;
 =======
     private Integer specializarea;
 >>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
+=======
+    private Integer specializarea;
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
 
     //varchar(50)
     @Column(name="numespec", length = 50)
@@ -116,13 +128,19 @@ public class Universitati implements Serializable{
     //varchar(50)
     @Column(name="numespecen", length = 50)
 <<<<<<< HEAD
+<<<<<<< HEAD
     private String numespecen;
 =======
+=======
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
     private Integer numespecen;
 
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "iduniversitate")
     private Absolventi absolventi;
+<<<<<<< HEAD
 >>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
+=======
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
 }

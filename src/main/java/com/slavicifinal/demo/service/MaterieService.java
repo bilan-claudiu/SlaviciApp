@@ -42,5 +42,24 @@ public class MaterieService {
         materieRepository.deleteById(id);
     }
 
+<<<<<<< HEAD
+=======
+    public Materie updateMaterie(Materie newMaterie, Long id) {
+        return materieRepository.findById(id).map(materie -> {
+            materie.setCod_mat(newMaterie.getCod_mat());
+            materie.setDenum_mat(newMaterie.getDenum_mat());
+            materie.setOrecurs(newMaterie.getOrecurs());
+            materie.setOresem(newMaterie.getOresem());
+            materie.setOrelab(newMaterie.getOrelab());
+            materie.setOrepgr(newMaterie.getOrepgr());
+            materie.setOrepractica(newMaterie.getOrepractica());
+            materie.setIduser(newMaterie.getIduser());
+            return materieRepository.save(materie);
+        }).orElseGet(() -> {
+            newMaterie.setId(id);
+            return materieRepository.save(newMaterie);
+        });
+    }
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
 
 }

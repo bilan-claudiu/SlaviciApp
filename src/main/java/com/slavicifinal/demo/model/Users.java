@@ -23,10 +23,14 @@ public class Users implements Serializable{
     //varchar 25
     @Column(name="user", length = 25)
 <<<<<<< HEAD
+<<<<<<< HEAD
     private String user;
 =======
     private Integer user;
 >>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
+=======
+    private Integer user;
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
 
     //varchar 25
     @Column(name="passwd", length = 25)
@@ -71,6 +75,7 @@ public class Users implements Serializable{
     //int
     @Column(name="viz_date")
 <<<<<<< HEAD
+<<<<<<< HEAD
     private int viz_date;
 
     //tinyint(1)
@@ -101,6 +106,8 @@ public class Users implements Serializable{
     @Column(name="status")
     private int status;
 =======
+=======
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
     private Boolean viz_date;
 
     //tinyint(1)
@@ -130,7 +137,10 @@ public class Users implements Serializable{
     //int
     @Column(name="status")
     private Integer status;
+<<<<<<< HEAD
 >>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
+=======
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
 
     //date
     @Column(name="intro_date")

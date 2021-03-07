@@ -20,6 +20,7 @@ public class Promotie implements Serializable {
 
     //lung max 50 caract.
 <<<<<<< HEAD
+<<<<<<< HEAD
     @Column(name="nume", length = 50)
     private String nume;
 =======
@@ -27,5 +28,10 @@ public class Promotie implements Serializable {
     @Column(name="nume", length = 50)
     private int nume;
 >>>>>>> 00ba1cb7ae9e2656391b506277d742fec6e53dad
+=======
+
+    @Column(name="nume", length = 50)
+    private int nume;
+>>>>>>> 3fc1a16bc4db8e6e1b6dcfd0f3770119c61adc39
 
 }
