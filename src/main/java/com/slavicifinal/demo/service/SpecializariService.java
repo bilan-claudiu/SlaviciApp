@@ -17,7 +17,7 @@ public class SpecializariService {
         this.specializariRepository = specializariRepository;
     }
 
-    public Specializari saveSpecializare (Specializari specializare){
+    public Specializari saveSpecializare(Specializari specializare) {
         return specializariRepository.save(specializare);
     }
 
@@ -25,25 +25,34 @@ public class SpecializariService {
         return specializariRepository.saveAll(newSpecializari);
     }
 
-    public Specializari getSpecializareById ( Long id){
+    public Specializari getSpecializareById(Long id) {
         return specializariRepository.findSpecializariById(id);
     }
 
-    public Specializari getSpecializariByNume( String nume){
+    public Specializari getSpecializariByNume(String nume) {
         return specializariRepository.findSpecializariByNume(nume);
     }
 
-    public Specializari getSpecializariByIdFacultate( Long idFacultate){
+    public Specializari getSpecializariByIdFacultate(Long idFacultate) {
         return specializariRepository.findSpecializariByIdfacultate(idFacultate);
     }
 
-   public void deleteSpecializareById ( Long id){
+    public void deleteSpecializareById(Long id) {
         specializariRepository.deleteById(id);
-   }
+    }
 
-   public List<Specializari> getAllSpecializari (){
+    public List<Specializari> getAllSpecializari() {
         return specializariRepository.findAll();
-   }
+    }
 
+    public Specializari updateSpecializare(Specializari newSpecializare, Long id) {
+        return specializariRepository.findById(id).map(specializari -> {
+            specializari.setNume(newSpecializare.getNume());
+            return specializariRepository.save(specializari);
+        }).orElseGet(() -> {
+            newSpecializare.setId(id);
+            return specializariRepository.save(newSpecializare);
+        });
+    }
 
 }

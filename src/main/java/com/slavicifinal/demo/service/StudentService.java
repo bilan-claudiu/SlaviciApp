@@ -1,6 +1,5 @@
 package com.slavicifinal.demo.service;
 
-import com.slavicifinal.demo.model.Specializari;
 import com.slavicifinal.demo.model.Student;
 import com.slavicifinal.demo.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,5 +64,16 @@ public class StudentService {
 
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
+    }
+
+    public Student updateStudent(Student newStudent, Long id) {
+        return studentRepository.findById(id).map(student -> {
+            student.setCnp(newStudent.getCnp());
+            return studentRepository.save(student);
+        }).orElseGet(() -> {
+            newStudent.setId(id);
+            return studentRepository.save(newStudent);
+        });
+
     }
 }

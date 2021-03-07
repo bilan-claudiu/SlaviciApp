@@ -15,7 +15,6 @@ import java.util.List;
 public class SpecializariController {
 
 
-
     @Autowired
     private SpecializariService specializariService;
 
@@ -25,31 +24,32 @@ public class SpecializariController {
         List<Specializari> specializari = specializariService.getAllSpecializari();
         return new ResponseEntity<>(specializari, HttpStatus.OK);
     }
+
     @GetMapping("/cauta-nume/{nume}")
-    public ResponseEntity<Specializari> getSpecializareByNume ( @PathVariable String nume){
-        Specializari specializare =  specializariService.getSpecializariByNume(nume);
+    public ResponseEntity<Specializari> getSpecializareByNume(@PathVariable String nume) {
+        Specializari specializare = specializariService.getSpecializariByNume(nume);
         return new ResponseEntity<Specializari>(specializare, HttpStatus.OK);
     }
 
-    @GetMapping("/cauta-id/{id}")
-    public ResponseEntity<Specializari> getSpecializareById( @PathVariable Long id){
-        Specializari specializare =  specializariService.getSpecializareById(id);
+    @GetMapping("/cauta/{id}")
+    public ResponseEntity<Specializari> getSpecializareById(@PathVariable Long id) {
+        Specializari specializare = specializariService.getSpecializareById(id);
         return new ResponseEntity<Specializari>(specializare, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-idFac/{idFacultate}")
-    public ResponseEntity<Specializari> getSpecializareByIdFacultate( @PathVariable Long idFacultate){
-        Specializari specializare =  specializariService.getSpecializariByIdFacultate(idFacultate);
+    public ResponseEntity<Specializari> getSpecializareByIdFacultate(@PathVariable Long idFacultate) {
+        Specializari specializare = specializariService.getSpecializariByIdFacultate(idFacultate);
         return new ResponseEntity<Specializari>(specializare, HttpStatus.OK);
     }
 
-    @PutMapping("/update")
-    public ResponseEntity<Specializari> updateSpecializare(@RequestBody Specializari specializare) {
-        Specializari newSpecializare = specializariService.saveSpecializare(specializare);
-        return new ResponseEntity<>(newSpecializare, HttpStatus.OK);
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Specializari> updateSpecializare(@RequestBody Specializari specializare, @PathVariable Long id) {
+        Specializari updateSpecializare = specializariService.updateSpecializare(specializare, id);
+        return new ResponseEntity<>(updateSpecializare, HttpStatus.OK);
     }
 
-    @PostMapping("/new")
+    @PostMapping("/adauga")
     public ResponseEntity<Specializari> adaugaSpecializare(@RequestBody Specializari specializare) {
         Specializari newSpecializare = specializariService.saveSpecializare(specializare);
         return new ResponseEntity<>(newSpecializare, HttpStatus.CREATED);

@@ -26,7 +26,7 @@ public class AbsolventiController {
         return new ResponseEntity<>(absolvents, HttpStatus.OK);
     }
 
-    @GetMapping("/cauta-id/{id}")
+    @GetMapping("/cauta/{id}")
     public ResponseEntity<Absolventi> getAbsolventById(@PathVariable Long id) {
         Absolventi absolvent = absolventiService.getAbsolventById(id);
         return new ResponseEntity<>(absolvent, HttpStatus.OK);
@@ -56,13 +56,13 @@ public class AbsolventiController {
         return new ResponseEntity<>(absolvent, HttpStatus.OK);
     }
 
-    @GetMapping("cauta-absolventi-promotia/{promotia}")
+    @GetMapping("cauta-lista-promotia/{promotia}")
     public ResponseEntity<List<Absolventi>> getAbsolventiByPromotie(@PathVariable String promotia) {
         List<Absolventi> absolventi = absolventiService.getAbsolventiListByPromotie(promotia);
         return new ResponseEntity<>(absolventi, HttpStatus.OK);
     }
 
-    @PostMapping("/adauga-absolvent")
+    @PostMapping("/adauga")
     public ResponseEntity<Absolventi> adaugaAbsolvent(@RequestBody Absolventi absolvent) {
         Absolventi newabsolvent = absolventiService.saveAbsolvent(absolvent);
         return new ResponseEntity<>(newabsolvent, HttpStatus.CREATED);
@@ -74,9 +74,9 @@ public class AbsolventiController {
         return new ResponseEntity<>(absolventiList, HttpStatus.CREATED);
     }
 
-    @PutMapping("/update-absolvent")
-    public ResponseEntity<Absolventi> updateStudent(@RequestBody Absolventi absolvent) {
-        Absolventi updateAbsolvent = absolventiService.saveAbsolvent(absolvent);
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Absolventi> updateStudent(@RequestBody Absolventi absolvent,@PathVariable  Long id) {
+        Absolventi updateAbsolvent = absolventiService.updateAbsolvent(absolvent,id);
         return new ResponseEntity<>(updateAbsolvent, HttpStatus.OK);
     }
 

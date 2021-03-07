@@ -33,7 +33,7 @@ public class StudentController {
         return new ResponseEntity<>(studentsBypromotie, HttpStatus.OK);
     }
 
-    @GetMapping("/cauta-id/{id}")
+    @GetMapping("/cauta/{id}")
     public ResponseEntity<Student> getStudentById(@PathVariable Long id) {
         Student student = studentService.getStudentById(id);
         return new ResponseEntity<>(student, HttpStatus.OK);
@@ -75,15 +75,15 @@ public class StudentController {
         return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
-    @PostMapping("/adauga-student")
+    @PostMapping("/adauga")
     public ResponseEntity<Student> adaugaStudent(@RequestBody Student student) {
         Student newStudent = studentService.saveStudent(student);
         return new ResponseEntity<>(newStudent, HttpStatus.CREATED);
     }
 
-    @PutMapping("/update-student")
-    public ResponseEntity<Student> updateStudent(@RequestBody Student student) {
-        Student updateStudent = studentService.saveStudent(student);
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Student> updateStudent(@RequestBody Student student, @PathVariable Long id) {
+        Student updateStudent = studentService.updateStudent(student,id);
         return new ResponseEntity<>(updateStudent, HttpStatus.OK);
     }
 

@@ -57,4 +57,15 @@ public class AbsolventiService {
         absolventiRepository.deleteById(id);
     }
 
+    public Absolventi updateAbsolvent(Absolventi newAbsolvent, Long id) {
+        return absolventiRepository.findById(id).map(absolventi -> {
+            absolventi.setId_stud(newAbsolvent.getId_stud());
+
+            return absolventiRepository.save(absolventi);
+        }).orElseGet(() -> {
+            newAbsolvent.setId(id);
+            return absolventiRepository.save(newAbsolvent);
+        });
+    }
+
 }

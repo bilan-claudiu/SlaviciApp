@@ -1,7 +1,6 @@
 package com.slavicifinal.demo.repository;
 
 import com.slavicifinal.demo.model.Absolventi;
-import com.slavicifinal.demo.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

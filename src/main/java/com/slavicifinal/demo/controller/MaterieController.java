@@ -40,25 +40,25 @@ public class MaterieController {
         return new ResponseEntity<>(materie, HttpStatus.OK);
     }
 
-    @PostMapping("/adauga-materie")
+    @PostMapping("/adauga")
     public ResponseEntity<Materie> adaugaMaterie(@RequestBody Materie materie) {
         Materie newMaterie = materieService.saveMaterie(materie);
         return new ResponseEntity<>(newMaterie, HttpStatus.CREATED);
     }
 
-    @PostMapping("/adauga-lista-Materii")
+    @PostMapping("/adauga-materii")
     public ResponseEntity<List<Materie>> adaugaMaterii(@RequestBody List<Materie> materii) {
         List<Materie> materieList = materieService.saveMaterii(materii);
         return new ResponseEntity<>(materieList, HttpStatus.CREATED);
     }
 
-    @PutMapping("/update-materie/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<Materie> updateMaterie(@RequestBody Materie materie, @PathVariable Long id) {
         Materie updateMaterie = materieService.updateMaterie(materie, id);
         return new ResponseEntity<>(updateMaterie, HttpStatus.OK);
     }
 
-    @DeleteMapping("/delete-id/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Materie> deletematerieById(@PathVariable Long id) {
         materieService.deleteMaterieById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

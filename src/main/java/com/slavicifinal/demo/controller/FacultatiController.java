@@ -59,12 +59,10 @@ public class FacultatiController {
         return new ResponseEntity<>(newFacultate, HttpStatus.CREATED);
     }
 
-    @PatchMapping("/update")
-    public ResponseEntity<Facultati> updateFacultate(@RequestBody Facultati facultate) {
-        Facultati curentFac = facultatiService.getfacultateById(facultate.getId());
-        if (curentFac.getId().equals(facultate.getId()))
-            facultatiService.saveFacultate(curentFac);
-        return new ResponseEntity<>(curentFac, HttpStatus.OK);
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Facultati> updateFacultate(@RequestBody Facultati facultate, @PathVariable Long id) {
+        Facultati updateFac = facultatiService.updateFacultate(facultate, id);
+        return new ResponseEntity<>(updateFac, HttpStatus.OK);
     }
 
     @PostMapping("/adauga-facultati")
@@ -73,7 +71,7 @@ public class FacultatiController {
         return new ResponseEntity<>(facultati, HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/delete-facultate/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Facultati> deleteFacultateById(@PathVariable Long id) {
         facultatiService.deleteFacultateById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
