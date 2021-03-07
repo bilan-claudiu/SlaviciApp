@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
+import java.time.LocalDate;
 
 
 @Data
@@ -346,7 +347,7 @@ public class Student implements Serializable {
 
     // date
     @Column(name="datamod",  length = 30)
-    private Date datamod;
+    private LocalDate datamod;
 
     // time
     @Column(name="timemod",  length = 30)
@@ -475,6 +476,22 @@ public class Student implements Serializable {
 
     public void setCetatenie(String cetatenie) {
         this.cetatenie = cetatenie;
+    }
+
+    public LocalDate getDatamod() {
+        return datamod;
+    }
+
+    public void setDatamod(LocalDate datamod) {
+        this.datamod = datamod;
+    }
+
+    public String getTimemod() {
+        return timemod;
+    }
+
+    public void setTimemod(String timemod) {
+        this.timemod = timemod;
     }
 
     public String getNationalitate() {

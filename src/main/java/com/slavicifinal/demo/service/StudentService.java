@@ -5,6 +5,9 @@ import com.slavicifinal.demo.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -18,6 +21,13 @@ public class StudentService {
     }
 
     public Student saveStudent(Student student) {
+
+        LocalDate now = LocalDate.now();
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        student.setDatamod(now);
+        student.setTimemod(sdf.format(timestamp));
+
         return studentRepository.save(student);
     }
 
@@ -68,7 +78,22 @@ public class StudentService {
 
     public Student updateStudent(Student newStudent, Long id) {
         return studentRepository.findById(id).map(student -> {
+           //automat generation of date and timestamp
+            LocalDate now = LocalDate.now();
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+            student.setDatamod(now);
+            student.setTimemod(sdf.format(timestamp));
+
+            //update fields for student
+            student.setAnfinal(newStudent.getAnfinal());
+            student.setAnlic(newStudent.getAnlic());
+            student.setAnpregatitor(newStudent.getAnpregatitor());
+            student.setCetatenie(newStudent.getCetatenie());
+            student.setCivila(newStudent.getCivila());
             student.setCnp(newStudent.getCnp());
+
+
             return studentRepository.save(student);
         }).orElseGet(() -> {
             newStudent.setId(id);

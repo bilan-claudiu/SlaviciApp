@@ -6,6 +6,9 @@ import com.slavicifinal.demo.repository.NoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -22,21 +25,37 @@ public class NoteService {
     }
 
     public Note saveNota(Note newNota) {
+        LocalDate now = LocalDate.now();
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        newNota.setDatamod(now);
+        newNota.setTimemod(sdf.format(timestamp));
+
         if (newNota.getNotac() >= 5 && newNota.getNotaa() >= 5) {
             newNota.setNotaf((newNota.getNotac() + newNota.getNotaa()) / 2);
         } else {
             newNota.setNotaf(0);
         }
-
         return noteRepository.save(newNota);
+
+
     }
 
     public Note updateNota(Note newNota, Long id) {
         return noteRepository.findById(id).map(nota -> {
+            //automat generate datamood and timemood
+            LocalDate now = LocalDate.now();
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+            nota.setDatamod(now);
+            nota.setTimemod(sdf.format(timestamp));
+
+            //update note fields
             nota.setIdstud(newNota.getIdstud());
             nota.setIdconfani(newNota.getIdconfani());
             nota.setNotaa(newNota.getNotaa());
             nota.setNotac(newNota.getNotac());
+            //check if note are valid(>5)
             if (newNota.getNotac() >= 5 && newNota.getNotaa() >= 5) {
                 nota.setNotaf((newNota.getNotac() + newNota.getNotaa()) / 2);
             } else {

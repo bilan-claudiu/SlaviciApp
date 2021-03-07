@@ -5,6 +5,11 @@ import com.slavicifinal.demo.repository.MaterieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @Service
@@ -18,6 +23,12 @@ public class MaterieService {
     }
 
     public Materie saveMaterie(Materie materie) {
+        //automat generation of date and timestamp
+        LocalDate now = LocalDate.now();
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        materie.setDatamod(now);
+        materie.setTimemod(sdf.format(timestamp));
         return materieRepository.save(materie);
     }
 
@@ -44,6 +55,13 @@ public class MaterieService {
 
     public Materie updateMaterie(Materie newMaterie, Long id) {
         return materieRepository.findById(id).map(materie -> {
+            //generate date and time stamp
+            LocalDate now = LocalDate.now();
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+            materie.setDatamod(now);
+            materie.setTimemod(sdf.format(timestamp));
+            //update fields for materie
             materie.setCod_mat(newMaterie.getCod_mat());
             materie.setDenum_mat(newMaterie.getDenum_mat());
             materie.setOrecurs(newMaterie.getOrecurs());

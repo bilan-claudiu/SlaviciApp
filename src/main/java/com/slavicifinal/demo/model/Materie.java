@@ -8,6 +8,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Time;
+import java.sql.Timestamp;
+import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -53,11 +55,11 @@ public class Materie implements Serializable {
 
     //ce functie apelez pentru "time"????
     @Column(name="timemod")
-    private Time timemod;
+    private String timemod;
 
     //ce functie apelez pentru "data"????
     @Column(name="datamod")
-    private Date datamod;
+    private LocalDate datamod;
 
     public void setId(Long id) {
         this.id = id;
@@ -127,13 +129,20 @@ public class Materie implements Serializable {
         this.iduser = iduser;
     }
 
-
-    public Date getDatamod() {
+    public LocalDate getDatamod() {
         return datamod;
     }
 
-    public void setDatamod(Date datamod) {
+    public void setDatamod(LocalDate datamod) {
         this.datamod = datamod;
+    }
+
+    public String getTimemod() {
+        return timemod;
+    }
+
+    public void setTimemod(String timemod) {
+        this.timemod = timemod;
     }
 
     public Long getId() {
