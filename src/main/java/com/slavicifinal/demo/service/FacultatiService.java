@@ -60,7 +60,11 @@ public class FacultatiService {
 
     public Facultati updateFacultate(Facultati newFacultate, Long id) {
         return facultatiRepository.findById(id).map(facultati -> {
+            facultati.setDecan(newFacultate.getDecan());
             facultati.setIduser(newFacultate.getIduser());
+            facultati.setNume(newFacultate.getNume());
+            facultati.setProdecan1(newFacultate.getProdecan1());
+            facultati.setSecretar(newFacultate.getSecretar());
 
             return facultatiRepository.save(facultati);
         }).orElseGet(() -> {
@@ -68,8 +72,6 @@ public class FacultatiService {
             return facultatiRepository.save(newFacultate);
         });
     }
-
-
 
 
 }

@@ -59,7 +59,42 @@ public class AbsolventiService {
 
     public Absolventi updateAbsolvent(Absolventi newAbsolvent, Long id) {
         return absolventiRepository.findById(id).map(absolventi -> {
+            absolventi.setAn_volum(newAbsolvent.getAn_volum());
+            absolventi.setAnfinal(newAbsolvent.getAnfinal());
+            absolventi.setAnul1(newAbsolvent.getAnul1());
+            absolventi.setAnul2(newAbsolvent.getAnul2());
+            absolventi.setAnul3(newAbsolvent.getAnul3());
+            absolventi.setAnul4(newAbsolvent.getAnul4());
+            absolventi.setAnul5(newAbsolvent.getAnul5());
+            absolventi.setC1(newAbsolvent.getC1());
+            absolventi.setC2(newAbsolvent.getC2());
+            absolventi.setC3(newAbsolvent.getC3());
+            absolventi.setC4(newAbsolvent.getC4());
+            absolventi.setCnp(newAbsolvent.getCnp());
+            absolventi.setCredite(newAbsolvent.getCredite());
+            absolventi.setDatanastere(newAbsolvent.getDatanastere());
             absolventi.setId_stud(newAbsolvent.getId_stud());
+            absolventi.setIdpromotie(newAbsolvent.getIdpromotie());
+            absolventi.setInitiale(newAbsolvent.getInitiale());
+            absolventi.setLicenta(newAbsolvent.getLicenta());
+            absolventi.setLocnastere(newAbsolvent.getLocnastere());
+            absolventi.setM1(newAbsolvent.getM1());
+            absolventi.setM2(newAbsolvent.getM2());
+            absolventi.setM3(newAbsolvent.getM3());
+            absolventi.setM4(newAbsolvent.getM4());
+            absolventi.setMama(newAbsolvent.getMama());
+            absolventi.setMedia(newAbsolvent.getMedia());
+            absolventi.setNr_mat(newAbsolvent.getNr_mat());
+            absolventi.setNume(newAbsolvent.getNume());
+            absolventi.setNumenastere(newAbsolvent.getNumenastere());
+            absolventi.setObservatii(newAbsolvent.getObservatii());
+            absolventi.setPozpromotie(newAbsolvent.getPozpromotie());
+            absolventi.setPrenume(newAbsolvent.getPrenume());
+            absolventi.setPromotia(newAbsolvent.getPromotia());
+            absolventi.setSexul(newAbsolvent.getSexul());
+            absolventi.setTata(newAbsolvent.getTata());
+            absolventi.setTotalpromotie(newAbsolvent.getTotalpromotie());
+            absolventi.setVolumul(newAbsolvent.getVolumul());
 
             return absolventiRepository.save(absolventi);
         }).orElseGet(() -> {

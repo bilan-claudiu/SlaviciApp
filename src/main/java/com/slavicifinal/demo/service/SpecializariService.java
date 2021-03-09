@@ -47,8 +47,9 @@ public class SpecializariService {
 
     public Specializari updateSpecializare(Specializari newSpecializare, Long id) {
         return specializariRepository.findById(id).map(specializari -> {
+            specializari.setIdfacultate(specializari.getIdfacultate());
+            specializari.setIduser(specializari.getIduser());
             specializari.setNume(newSpecializare.getNume());
-
 
             return specializariRepository.save(specializari);
         }).orElseGet(() -> {

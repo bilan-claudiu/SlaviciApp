@@ -502,7 +502,7 @@ public class Student implements Serializable {
         this.nationalitate = nationalitate;
     }
 
-    public boolean isStagiumilitar() {
+    public boolean getStagiumilitar() {
         return stagiumilitar;
     }
 

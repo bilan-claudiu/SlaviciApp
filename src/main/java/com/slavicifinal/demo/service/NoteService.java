@@ -51,10 +51,12 @@ public class NoteService {
             nota.setTimemod(sdf.format(timestamp));
 
             //update note fields
-            nota.setIdstud(newNota.getIdstud());
             nota.setIdconfani(newNota.getIdconfani());
+            nota.setIdstud(newNota.getIdstud());
+            nota.setIduser(newNota.getIduser());
             nota.setNotaa(newNota.getNotaa());
             nota.setNotac(newNota.getNotac());
+            nota.setNotaf(newNota.getNotaf());
             //check if note are valid(>5)
             if (newNota.getNotac() >= 5 && newNota.getNotaa() >= 5) {
                 nota.setNotaf((newNota.getNotac() + newNota.getNotaa()) / 2);
