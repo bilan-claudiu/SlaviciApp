@@ -48,4 +48,48 @@ public class Facultati implements Serializable {
     public Long getId() {
         return id;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public String getDecan() {
+        return decan;
+    }
+
+    public void setDecan(String decan) {
+        this.decan = decan;
+    }
+
+    public String getProdecan1() {
+        return prodecan1;
+    }
+
+    public void setProdecan1(String prodecan1) {
+        this.prodecan1 = prodecan1;
+    }
+
+    public String getSecretar() {
+        return secretar;
+    }
+
+    public void setSecretar(String secretar) {
+        this.secretar = secretar;
+    }
+
+    public Long getIduser() {
+        return iduser;
+    }
+
+    public void setIduser(Long iduser) {
+        this.iduser = iduser;
+    }
 }

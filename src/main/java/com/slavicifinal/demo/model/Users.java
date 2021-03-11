@@ -66,15 +66,15 @@ public class Users implements Serializable{
 
     //int
     @Column(name="viz_date")
-    private Boolean viz_date;
+    private Boolean vizDate;
 
     //tinyint(1)
     @Column(name="intro_stud")
-    private Boolean intro_stud;
+    private Boolean introStud;
 
     //tinyint(1)
     @Column(name="intro_note")
-    private Boolean intro_note;
+    private Boolean introNote;
 
     //tinyint(1)
     @Column(name="echivalari")
@@ -90,7 +90,7 @@ public class Users implements Serializable{
 
     //tinyint(1)
     @Column(name="intro_date_ani")
-    private Boolean intro_date_ani;
+    private Boolean introDateAni;
 
     //int
     @Column(name="status")
@@ -98,15 +98,15 @@ public class Users implements Serializable{
 
     //date
     @Column(name="intro_date")
-    private Date intro_date;
+    private Date introDate;
 
     //date
     @Column(name="start_date")
-    private Date start_date;
+    private Date startDate;
 
     //date
     @Column(name="stop_date")
-    private Date stop_date;
+    private Date stopDate;
 
     //date
     @Column(name="datamod")
@@ -115,4 +115,180 @@ public class Users implements Serializable{
     //time
     @Column(name="timemod")
     private Time timemod;
+
+    public Integer getUser() {
+        return user;
+    }
+
+    public void setUser(Integer user) {
+        this.user = user;
+    }
+
+    public String getPasswd() {
+        return passwd;
+    }
+
+    public void setPasswd(String passwd) {
+        this.passwd = passwd;
+    }
+
+    public String getNume() {
+        return nume;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public String getPrenume() {
+        return prenume;
+    }
+
+    public void setPrenume(String prenume) {
+        this.prenume = prenume;
+    }
+
+    public String getSeriebi() {
+        return seriebi;
+    }
+
+    public void setSeriebi(String seriebi) {
+        this.seriebi = seriebi;
+    }
+
+    public String getNrbi() {
+        return nrbi;
+    }
+
+    public void setNrbi(String nrbi) {
+        this.nrbi = nrbi;
+    }
+
+    public String getDomiciliu() {
+        return domiciliu;
+    }
+
+    public void setDomiciliu(String domiciliu) {
+        this.domiciliu = domiciliu;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    public String getCnp() {
+        return cnp;
+    }
+
+    public void setCnp(String cnp) {
+        this.cnp = cnp;
+    }
+
+    public String getPoza() {
+        return poza;
+    }
+
+    public void setPoza(String poza) {
+        this.poza = poza;
+    }
+
+    public String getObservatii() {
+        return observatii;
+    }
+
+    public void setObservatii(String observatii) {
+        this.observatii = observatii;
+    }
+
+    public Boolean getVizDate() {
+        return vizDate;
+    }
+
+    public void setVizDate(Boolean vizDate) {
+        this.vizDate = vizDate;
+    }
+
+    public Boolean getIntroStud() {
+        return introStud;
+    }
+
+    public void setIntroStud(Boolean introStud) {
+        this.introStud = introStud;
+    }
+
+    public Boolean getIntroNote() {
+        return introNote;
+    }
+
+    public void setIntroNote(Boolean introNote) {
+        this.introNote = introNote;
+    }
+
+    public Boolean getEchivalari() {
+        return echivalari;
+    }
+
+    public void setEchivalari(Boolean echivalari) {
+        this.echivalari = echivalari;
+    }
+
+    public Boolean getTransfer() {
+        return transfer;
+    }
+
+    public void setTransfer(Boolean transfer) {
+        this.transfer = transfer;
+    }
+
+    public Boolean getCitiredate() {
+        return citiredate;
+    }
+
+    public void setCitiredate(Boolean citiredate) {
+        this.citiredate = citiredate;
+    }
+
+    public Boolean getIntroDateAni() {
+        return introDateAni;
+    }
+
+    public void setIntroDateAni(Boolean introDateAni) {
+        this.introDateAni = introDateAni;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public Date getIntroDate() {
+        return introDate;
+    }
+
+    public void setIntroDate(Date introDate) {
+        this.introDate = introDate;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    public Date getStopDate() {
+        return stopDate;
+    }
+
+    public void setStopDate(Date stopDate) {
+        this.stopDate = stopDate;
+    }
 }

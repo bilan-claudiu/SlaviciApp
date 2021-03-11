@@ -19,7 +19,8 @@ public class Promotie implements Serializable {
     private Long id;
 
     //lung max 50 caract.
-    @Column(name="nume")
-    private Integer nume;
+
+    @Column(name="nume", length = 50)
+    private int nume;
 
 }

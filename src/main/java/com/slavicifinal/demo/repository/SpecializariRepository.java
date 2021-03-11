@@ -8,5 +8,6 @@ public interface SpecializariRepository extends JpaRepository<Specializari, Long
     Specializari findSpecializariById(Long id);
     Specializari findSpecializariByNume(String nume);
     Specializari findSpecializariByIdfacultate(Long id);
-    void  deleteSpecializariById (Long id);
+
+    void deleteById(Long id);
 }
