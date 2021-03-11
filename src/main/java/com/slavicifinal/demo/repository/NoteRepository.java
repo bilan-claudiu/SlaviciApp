@@ -3,13 +3,11 @@ package com.slavicifinal.demo.repository;
 import com.slavicifinal.demo.model.Note;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface NoteRepository extends JpaRepository<Note,Long> {
+import java.util.List;
 
-    Note findNoteById(Long id);
-    Note findNoteByIdconfani(Long idConfani);
-    Note findNoteByIdstud(Long idStud);
-    Note findNoteByNotaf( float notaf);
-    Note findNoteByIduser(int iduser);
+public interface NoteRepository extends JpaRepository<Note, Long> {
+
+    List<Note> findNoteByIdstud(Long studId);
+
     void deleteById(Long id);
-    void deleteByIduser(int iduser);
 }
