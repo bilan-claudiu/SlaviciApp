@@ -73,7 +73,7 @@ public class Absolventi implements Serializable {
 
     //lungimea max 10 caractere
     @Column(name="volumul", length = 10)
-    private short volumul;
+    private String volumul;
 
     //lungimea max 20 caractere
     @Column(name="anul1", length = 20)
@@ -102,7 +102,7 @@ public class Absolventi implements Serializable {
     private char sexul;
 
     @Column(name="credite")
-    private short credite;
+    private String credite;
 
     @Column(name="totalpromotie")
     private int totalpromotie;
@@ -278,11 +278,11 @@ public class Absolventi implements Serializable {
         this.promotia = promotia;
     }
 
-    public short getVolumul() {
+    public String getVolumul() {
         return volumul;
     }
 
-    public void setVolumul(short volumul) {
+    public void setVolumul(String volumul) {
         this.volumul = volumul;
     }
 
@@ -342,11 +342,11 @@ public class Absolventi implements Serializable {
         this.sexul = sexul;
     }
 
-    public short getCredite() {
+    public String getCredite() {
         return credite;
     }
 
-    public void setCredite(short credite) {
+    public void setCredite(String credite) {
         this.credite = credite;
     }
 
