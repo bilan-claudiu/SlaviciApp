@@ -22,6 +22,7 @@ public class StudentService {
 
     public Student saveStudent(Student student) {
 
+        // automat generated local date and time stamp
         LocalDate now = LocalDate.now();
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
@@ -35,6 +36,7 @@ public class StudentService {
         return studentRepository.saveAll(studentList);
     }
 
+    // get student by id
     public Student getStudentById(Long id) {
         return studentRepository.findStudentById(id);
     }

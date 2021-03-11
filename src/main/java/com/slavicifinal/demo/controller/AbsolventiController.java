@@ -32,7 +32,7 @@ public class AbsolventiController {
         return new ResponseEntity<>(absolvent, HttpStatus.OK);
     }
 
-    @GetMapping("/cauta-proomotia/{promotia}")
+    @GetMapping("/cauta-promotia/{promotia}")
     public ResponseEntity<Absolventi> getAbsolventByPromotia(@PathVariable String promotia) {
         Absolventi absolvent = absolventiService.getAbsolventByPromotia(promotia);
         return new ResponseEntity<>(absolvent, HttpStatus.OK);
@@ -56,7 +56,7 @@ public class AbsolventiController {
         return new ResponseEntity<>(absolvent, HttpStatus.OK);
     }
 
-    @GetMapping("cauta-lista-promotia/{promotia}")
+    @GetMapping("/cauta-lista-promotia/{promotia}")
     public ResponseEntity<List<Absolventi>> getAbsolventiByPromotie(@PathVariable String promotia) {
         List<Absolventi> absolventi = absolventiService.getAbsolventiListByPromotie(promotia);
         return new ResponseEntity<>(absolventi, HttpStatus.OK);

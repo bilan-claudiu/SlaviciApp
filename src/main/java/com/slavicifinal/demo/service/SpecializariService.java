@@ -5,6 +5,9 @@ import com.slavicifinal.demo.repository.SpecializariRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -18,6 +21,12 @@ public class SpecializariService {
     }
 
     public Specializari saveSpecializare(Specializari specializare) {
+        LocalDate now = LocalDate.now();
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        specializare.setDatamod(now);
+        specializare.setTimemod(sdf.format(timestamp));
+
         return specializariRepository.save(specializare);
     }
 
@@ -47,8 +56,15 @@ public class SpecializariService {
 
     public Specializari updateSpecializare(Specializari newSpecializare, Long id) {
         return specializariRepository.findById(id).map(specializari -> {
-            specializari.setIdfacultate(specializari.getIdfacultate());
-            specializari.setIduser(specializari.getIduser());
+
+            //automat generate datamood and timemood
+            LocalDate now = LocalDate.now();
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+            specializari.setDatamod(now);
+            specializari.setTimemod(sdf.format(timestamp));
+            specializari.setIdfacultate(newSpecializare.getIdfacultate());
+            specializari.setIduser(newSpecializare.getIduser());
             specializari.setNume(newSpecializare.getNume());
 
             return specializariRepository.save(specializari);

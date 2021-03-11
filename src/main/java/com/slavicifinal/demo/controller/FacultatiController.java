@@ -29,13 +29,13 @@ public class FacultatiController {
         return new ResponseEntity<>(facultate, HttpStatus.OK);
     }
 
-    @GetMapping("/cauta-nume-decan /{numeDecan}")
+    @GetMapping("/cauta-nume-decan/{numeDecan}")
     public ResponseEntity<Facultati> getFacultateByDecan(@PathVariable String numeDecan) {
         Facultati facultate = facultatiService.getfacultateByDecan(numeDecan);
         return new ResponseEntity<>(facultate, HttpStatus.OK);
     }
 
-    @GetMapping("/cauta-nume-prodecan /{prodecan}")
+    @GetMapping("/cauta-nume-prodecan/{prodecan}")
     public ResponseEntity<Facultati> getFacultateByProdecan(@PathVariable String prodecan) {
         Facultati facultate = facultatiService.getfacultateByProdecan(prodecan);
         return new ResponseEntity<>(facultate, HttpStatus.OK);
