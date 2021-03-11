@@ -6,9 +6,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Date;
-import java.sql.Time;
-import java.sql.Timestamp;
 import java.time.LocalDate;
 
 @Data
@@ -24,11 +21,11 @@ public class Materie implements Serializable {
 
     //lung. max 15 caract.
     @Column(name="cod_mat", length = 15)
-    private String cod_mat;
+    private String codMat;
 
     //lung. max 50 caract.
     @Column(name="denum_mat", length = 50)
-    private String denum_mat;
+    private String denumMat;
 
     //lung. max 5 caract.
     @Column(name="orecurs", length = 5)
@@ -65,20 +62,20 @@ public class Materie implements Serializable {
         this.id = id;
     }
 
-    public String getCod_mat() {
-        return cod_mat;
+    public String getCodMat() {
+        return codMat;
     }
 
-    public void setCod_mat(String cod_mat) {
-        this.cod_mat = cod_mat;
+    public void setCodMat(String codMat) {
+        this.codMat = codMat;
     }
 
-    public String getDenum_mat() {
-        return denum_mat;
+    public String getDenumMat() {
+        return denumMat;
     }
 
-    public void setDenum_mat(String denum_mat) {
-        this.denum_mat = denum_mat;
+    public void setDenumMat(String denumMat) {
+        this.denumMat = denumMat;
     }
 
     public String getOrecurs() {

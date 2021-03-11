@@ -73,7 +73,7 @@ public class AbsolventiService {
             absolventi.setCnp(newAbsolvent.getCnp());
             absolventi.setCredite(newAbsolvent.getCredite());
             absolventi.setDatanastere(newAbsolvent.getDatanastere());
-            absolventi.setId_stud(newAbsolvent.getId_stud());
+            absolventi.setIdStud(newAbsolvent.getIdStud());
             absolventi.setIdpromotie(newAbsolvent.getIdpromotie());
             absolventi.setInitiale(newAbsolvent.getInitiale());
             absolventi.setLicenta(newAbsolvent.getLicenta());

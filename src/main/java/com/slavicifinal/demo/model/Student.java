@@ -155,147 +155,147 @@ public class Student implements Serializable {
 
     // varchar(25)
     @Column(name="liceu_localit",  length = 25)
-    private String liceu_localit;
+    private String liceuLocalit;
 
     // varchar(25)
     @Column(name="liceu_tara",  length = 25)
-    private String liceu_tara;
+    private String liceuTara;
 
     // varchar(25)
     @Column(name="liceu_judet",  length = 25)
-    private String liceu_judet;
+    private String liceuJudet;
 
     // varchar(50)
     @Column(name="liceu_profil",  length = 50)
-    private String liceu_profil;
+    private String liceuProfil;
 
     // varchar(20)
     @Column(name="liceu_durata",  length = 20)
-    private String liceu_durata;
+    private String liceuDurata;
 
     // varchar(20)
     @Column(name="liceu_anabs",  length = 20)
-    private String liceu_anabs;
+    private String liceuAnabs;
 
     // varchar(25)
     @Column(name="liceu_forma",  length = 25)
-    private String liceu_forma;
+    private String liceuForma;
 
     // varchar(50)
     @Column(name="liceu_diploma",  length = 50)
-    private String liceu_diploma;
+    private String liceuDiploma;
 
     // varchar(25)
     @Column(name="liceu_serie",  length = 25)
-    private String liceu_serie;
+    private String liceuSerie;
 
     // varchar(25)
     @Column(name="liceu_numar",  length = 25)
-    private String liceu_numar;
+    private String liceuNumar;
 
     // varchar(40)
     @Column(name="liceu_emis",  length = 40)
-    private String liceu_emis;
+    private String liceuEmis;
 
     // varchar(5)
     @Column(name="liceu_anemis",  length = 5)
-    private String liceu_anemis;
+    private String liceuAnemis;
 
     // varchar(15)
     @Column(name="liceu_matricola",  length = 15)
-    private String liceu_matricola;
+    private String liceuMatricola;
 
     // varchar(30)
     @Column(name="liceu_vizare",  length = 30)
-    private String liceu_vizare;
+    private String liceuVizare;
 
     // float(5,2)
     @Column(name="liceu_bac")
-    private Float liceu_bac;
+    private Float liceuBac;
 
     // float(5,2)
     @Column(name="liceu_media")
-    private Float liceu_media;
+    private Float liceuMedia;
 
     // varchar(25)
     @Column(name="univ_tara",  length = 25)
-    private String univ_tara;
+    private String univTara;
 
     // varchar(25)
     @Column(name="univ_localit",  length = 25)
-    private String univ_localit;
+    private String univLocalit;
 
     // varchar(25)
     @Column(name="univ_judet",  length = 25)
-    private String univ_judet;
+    private String univJudet;
 
     // varchar(50)
     @Column(name="univ_denumire",  length = 50)
-    private String univ_denumire;
+    private String univDenumire;
 
     // varchar(50)
     @Column(name="liceu_denumire",  length = 50)
-    private String liceu_denumire;
+    private String liceuDenumire;
 
     // varchar(50)
     @Column(name="univ_facultate",  length = 50)
-    private String univ_facultate;
+    private String univFacultate;
 
     // varchar(50)
     @Column(name="univ_domeniu",  length = 50)
-    private String univ_domeniu;
+    private String univDomeniu;
 
     // varchar(50)
     @Column(name="univ_specializare",  length = 50)
-    private String univ_specializare;
+    private String univSpecializare;
 
     // varchar(50)
     @Column(name="univ_titlu",  length = 50)
-    private String univ_titlu;
+    private String univTitlu;
 
     // varchar(15)
     @Column(name="univ_forma",  length = 15)
-    private String univ_forma;
+    private String univForma;
 
     // varchar(15)
     @Column(name="univ_taxa",  length = 15)
-    private String univ_taxa;
+    private String univTaxa;
 
     // varchar(15)
     @Column(name="univ_durata",  length = 15)
-    private String univ_durata;
+    private String univDurata;
 
     // varchar(5)
     @Column(name="univ_anabs",  length = 5)
-    private String univ_anabs;
+    private String univAnabs;
 
     // varchar(25)
     @Column(name="univ_diploma",  length = 25)
-    private String univ_diploma;
+    private String univDiploma;
 
     // varchar(25
     @Column(name="univ_serie",  length = 25)
-    private String univ_serie;
+    private String univSerie;
 
     // varchar(25)
     @Column(name="univ_numar",  length = 25)
-    private String univ_numar;
+    private String univNumar;
 
     // varchar(25)
     @Column(name="univ_emis",  length = 25)
-    private String univ_emis;
+    private String univEmis;
 
     // varchar(5)
     @Column(name="univ_anemis",  length = 5)
-    private String univ_anemis;
+    private String univAnemis;
 
     // varchar(15)
     @Column(name="univ_matricola",  length = 15)
-    private String univ_matricola;
+    private String univMatricola;
 
     // varchar(30)
     @Column(name="univ_vizare",  length = 30)
-    private String univ_vizare;
+    private String univVizare;
 
     // varchar(3)
     @Column(name="idspecializare",  length = 3)
@@ -315,7 +315,7 @@ public class Student implements Serializable {
 
     // varchar(50)
     @Column(name="nr_mat",  length = 50)
-    private String nr_mat;
+    private String nrMat;
 
     // tinyint(1)
     @Column(name="exportweb")
@@ -646,292 +646,292 @@ public class Student implements Serializable {
         this.dezabilitati = dezabilitati;
     }
 
-    public String getLiceu_localit() {
-        return liceu_localit;
+    public String getLiceuLocalit() {
+        return liceuLocalit;
     }
 
-    public void setLiceu_localit(String liceu_localit) {
-        this.liceu_localit = liceu_localit;
+    public void setLiceuLocalit(String liceuLocalit) {
+        this.liceuLocalit = liceuLocalit;
     }
 
-    public String getLiceu_tara() {
-        return liceu_tara;
+    public String getLiceuTara() {
+        return liceuTara;
     }
 
-    public void setLiceu_tara(String liceu_tara) {
-        this.liceu_tara = liceu_tara;
+    public void setLiceuTara(String liceuTara) {
+        this.liceuTara = liceuTara;
     }
 
-    public String getLiceu_judet() {
-        return liceu_judet;
+    public String getLiceuJudet() {
+        return liceuJudet;
     }
 
-    public void setLiceu_judet(String liceu_judet) {
-        this.liceu_judet = liceu_judet;
+    public void setLiceuJudet(String liceuJudet) {
+        this.liceuJudet = liceuJudet;
     }
 
-    public String getLiceu_profil() {
-        return liceu_profil;
+    public String getLiceuProfil() {
+        return liceuProfil;
     }
 
-    public void setLiceu_profil(String liceu_profil) {
-        this.liceu_profil = liceu_profil;
+    public void setLiceuProfil(String liceuProfil) {
+        this.liceuProfil = liceuProfil;
     }
 
-    public String getLiceu_durata() {
-        return liceu_durata;
+    public String getLiceuDurata() {
+        return liceuDurata;
     }
 
-    public void setLiceu_durata(String liceu_durata) {
-        this.liceu_durata = liceu_durata;
+    public void setLiceuDurata(String liceuDurata) {
+        this.liceuDurata = liceuDurata;
     }
 
-    public String getLiceu_anabs() {
-        return liceu_anabs;
+    public String getLiceuAnabs() {
+        return liceuAnabs;
     }
 
-    public void setLiceu_anabs(String liceu_anabs) {
-        this.liceu_anabs = liceu_anabs;
+    public void setLiceuAnabs(String liceuAnabs) {
+        this.liceuAnabs = liceuAnabs;
     }
 
-    public String getLiceu_forma() {
-        return liceu_forma;
+    public String getLiceuForma() {
+        return liceuForma;
     }
 
-    public void setLiceu_forma(String liceu_forma) {
-        this.liceu_forma = liceu_forma;
+    public void setLiceuForma(String liceuForma) {
+        this.liceuForma = liceuForma;
     }
 
-    public String getLiceu_diploma() {
-        return liceu_diploma;
+    public String getLiceuDiploma() {
+        return liceuDiploma;
     }
 
-    public void setLiceu_diploma(String liceu_diploma) {
-        this.liceu_diploma = liceu_diploma;
+    public void setLiceuDiploma(String liceuDiploma) {
+        this.liceuDiploma = liceuDiploma;
     }
 
-    public String getLiceu_serie() {
-        return liceu_serie;
+    public String getLiceuSerie() {
+        return liceuSerie;
     }
 
-    public void setLiceu_serie(String liceu_serie) {
-        this.liceu_serie = liceu_serie;
+    public void setLiceuSerie(String liceuSerie) {
+        this.liceuSerie = liceuSerie;
     }
 
-    public String getLiceu_numar() {
-        return liceu_numar;
+    public String getLiceuNumar() {
+        return liceuNumar;
     }
 
-    public void setLiceu_numar(String liceu_numar) {
-        this.liceu_numar = liceu_numar;
+    public void setLiceuNumar(String liceuNumar) {
+        this.liceuNumar = liceuNumar;
     }
 
-    public String getLiceu_emis() {
-        return liceu_emis;
+    public String getLiceuEmis() {
+        return liceuEmis;
     }
 
-    public void setLiceu_emis(String liceu_emis) {
-        this.liceu_emis = liceu_emis;
+    public void setLiceuEmis(String liceuEmis) {
+        this.liceuEmis = liceuEmis;
     }
 
-    public String getLiceu_anemis() {
-        return liceu_anemis;
+    public String getLiceuAnemis() {
+        return liceuAnemis;
     }
 
-    public void setLiceu_anemis(String liceu_anemis) {
-        this.liceu_anemis = liceu_anemis;
+    public void setLiceuAnemis(String liceuAnemis) {
+        this.liceuAnemis = liceuAnemis;
     }
 
-    public String getLiceu_matricola() {
-        return liceu_matricola;
+    public String getLiceuMatricola() {
+        return liceuMatricola;
     }
 
-    public void setLiceu_matricola(String liceu_matricola) {
-        this.liceu_matricola = liceu_matricola;
+    public void setLiceuMatricola(String liceuMatricola) {
+        this.liceuMatricola = liceuMatricola;
     }
 
-    public String getLiceu_vizare() {
-        return liceu_vizare;
+    public String getLiceuVizare() {
+        return liceuVizare;
     }
 
-    public void setLiceu_vizare(String liceu_vizare) {
-        this.liceu_vizare = liceu_vizare;
+    public void setLiceuVizare(String liceuVizare) {
+        this.liceuVizare = liceuVizare;
     }
 
-    public Float getLiceu_bac() {
-        return liceu_bac;
+    public Float getLiceuBac() {
+        return liceuBac;
     }
 
-    public void setLiceu_bac(Float liceu_bac) {
-        this.liceu_bac = liceu_bac;
+    public void setLiceuBac(Float liceuBac) {
+        this.liceuBac = liceuBac;
     }
 
-    public Float getLiceu_media() {
-        return liceu_media;
+    public Float getLiceuMedia() {
+        return liceuMedia;
     }
 
-    public void setLiceu_media(Float liceu_media) {
-        this.liceu_media = liceu_media;
+    public void setLiceuMedia(Float liceuMedia) {
+        this.liceuMedia = liceuMedia;
     }
 
-    public String getUniv_tara() {
-        return univ_tara;
+    public String getUnivTara() {
+        return univTara;
     }
 
-    public void setUniv_tara(String univ_tara) {
-        this.univ_tara = univ_tara;
+    public void setUnivTara(String univTara) {
+        this.univTara = univTara;
     }
 
-    public String getUniv_localit() {
-        return univ_localit;
+    public String getUnivLocalit() {
+        return univLocalit;
     }
 
-    public void setUniv_localit(String univ_localit) {
-        this.univ_localit = univ_localit;
+    public void setUnivLocalit(String univLocalit) {
+        this.univLocalit = univLocalit;
     }
 
-    public String getUniv_judet() {
-        return univ_judet;
+    public String getUnivJudet() {
+        return univJudet;
     }
 
-    public void setUniv_judet(String univ_judet) {
-        this.univ_judet = univ_judet;
+    public void setUnivJudet(String univJudet) {
+        this.univJudet = univJudet;
     }
 
-    public String getUniv_denumire() {
-        return univ_denumire;
+    public String getUnivDenumire() {
+        return univDenumire;
     }
 
-    public void setUniv_denumire(String univ_denumire) {
-        this.univ_denumire = univ_denumire;
+    public void setUnivDenumire(String univDenumire) {
+        this.univDenumire = univDenumire;
     }
 
-    public String getLiceu_denumire() {
-        return liceu_denumire;
+    public String getLiceuDenumire() {
+        return liceuDenumire;
     }
 
-    public void setLiceu_denumire(String liceu_denumire) {
-        this.liceu_denumire = liceu_denumire;
+    public void setLiceuDenumire(String liceuDenumire) {
+        this.liceuDenumire = liceuDenumire;
     }
 
-    public String getUniv_facultate() {
-        return univ_facultate;
+    public String getUnivFacultate() {
+        return univFacultate;
     }
 
-    public void setUniv_facultate(String univ_facultate) {
-        this.univ_facultate = univ_facultate;
+    public void setUnivFacultate(String univFacultate) {
+        this.univFacultate = univFacultate;
     }
 
-    public String getUniv_domeniu() {
-        return univ_domeniu;
+    public String getUnivDomeniu() {
+        return univDomeniu;
     }
 
-    public void setUniv_domeniu(String univ_domeniu) {
-        this.univ_domeniu = univ_domeniu;
+    public void setUnivDomeniu(String univDomeniu) {
+        this.univDomeniu = univDomeniu;
     }
 
-    public String getUniv_specializare() {
-        return univ_specializare;
+    public String getUnivSpecializare() {
+        return univSpecializare;
     }
 
-    public void setUniv_specializare(String univ_specializare) {
-        this.univ_specializare = univ_specializare;
+    public void setUnivSpecializare(String univSpecializare) {
+        this.univSpecializare = univSpecializare;
     }
 
-    public String getUniv_titlu() {
-        return univ_titlu;
+    public String getUnivTitlu() {
+        return univTitlu;
     }
 
-    public void setUniv_titlu(String univ_titlu) {
-        this.univ_titlu = univ_titlu;
+    public void setUnivTitlu(String univTitlu) {
+        this.univTitlu = univTitlu;
     }
 
-    public String getUniv_forma() {
-        return univ_forma;
+    public String getUnivForma() {
+        return univForma;
     }
 
-    public void setUniv_forma(String univ_forma) {
-        this.univ_forma = univ_forma;
+    public void setUnivForma(String univForma) {
+        this.univForma = univForma;
     }
 
-    public String getUniv_taxa() {
-        return univ_taxa;
+    public String getUnivTaxa() {
+        return univTaxa;
     }
 
-    public void setUniv_taxa(String univ_taxa) {
-        this.univ_taxa = univ_taxa;
+    public void setUnivTaxa(String univTaxa) {
+        this.univTaxa = univTaxa;
     }
 
-    public String getUniv_durata() {
-        return univ_durata;
+    public String getUnivDurata() {
+        return univDurata;
     }
 
-    public void setUniv_durata(String univ_durata) {
-        this.univ_durata = univ_durata;
+    public void setUnivDurata(String univDurata) {
+        this.univDurata = univDurata;
     }
 
-    public String getUniv_anabs() {
-        return univ_anabs;
+    public String getUnivAnabs() {
+        return univAnabs;
     }
 
-    public void setUniv_anabs(String univ_anabs) {
-        this.univ_anabs = univ_anabs;
+    public void setUnivAnabs(String univAnabs) {
+        this.univAnabs = univAnabs;
     }
 
-    public String getUniv_diploma() {
-        return univ_diploma;
+    public String getUnivDiploma() {
+        return univDiploma;
     }
 
-    public void setUniv_diploma(String univ_diploma) {
-        this.univ_diploma = univ_diploma;
+    public void setUnivDiploma(String univDiploma) {
+        this.univDiploma = univDiploma;
     }
 
-    public String getUniv_serie() {
-        return univ_serie;
+    public String getUnivSerie() {
+        return univSerie;
     }
 
-    public void setUniv_serie(String univ_serie) {
-        this.univ_serie = univ_serie;
+    public void setUnivSerie(String univSerie) {
+        this.univSerie = univSerie;
     }
 
-    public String getUniv_numar() {
-        return univ_numar;
+    public String getUnivNumar() {
+        return univNumar;
     }
 
-    public void setUniv_numar(String univ_numar) {
-        this.univ_numar = univ_numar;
+    public void setUnivNumar(String univNumar) {
+        this.univNumar = univNumar;
     }
 
-    public String getUniv_emis() {
-        return univ_emis;
+    public String getUnivEmis() {
+        return univEmis;
     }
 
-    public void setUniv_emis(String univ_emis) {
-        this.univ_emis = univ_emis;
+    public void setUnivEmis(String univEmis) {
+        this.univEmis = univEmis;
     }
 
-    public String getUniv_anemis() {
-        return univ_anemis;
+    public String getUnivAnemis() {
+        return univAnemis;
     }
 
-    public void setUniv_anemis(String univ_anemis) {
-        this.univ_anemis = univ_anemis;
+    public void setUnivAnemis(String univAnemis) {
+        this.univAnemis = univAnemis;
     }
 
-    public String getUniv_matricola() {
-        return univ_matricola;
+    public String getUnivMatricola() {
+        return univMatricola;
     }
 
-    public void setUniv_matricola(String univ_matricola) {
-        this.univ_matricola = univ_matricola;
+    public void setUnivMatricola(String univMatricola) {
+        this.univMatricola = univMatricola;
     }
 
-    public String getUniv_vizare() {
-        return univ_vizare;
+    public String getUnivVizare() {
+        return univVizare;
     }
 
-    public void setUniv_vizare(String univ_vizare) {
-        this.univ_vizare = univ_vizare;
+    public void setUnivVizare(String univVizare) {
+        this.univVizare = univVizare;
     }
 
     public String getIdspecializare() {
@@ -966,12 +966,12 @@ public class Student implements Serializable {
         this.volumul = volumul;
     }
 
-    public String getNr_mat() {
-        return nr_mat;
+    public String getNrMat() {
+        return nrMat;
     }
 
-    public void setNr_mat(String nr_mat) {
-        this.nr_mat = nr_mat;
+    public void setNrMat(String nrMat) {
+        this.nrMat = nrMat;
     }
 
     public Boolean getExportweb() {

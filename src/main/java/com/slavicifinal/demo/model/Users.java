@@ -66,15 +66,15 @@ public class Users implements Serializable{
 
     //int
     @Column(name="viz_date")
-    private Boolean viz_date;
+    private Boolean vizDate;
 
     //tinyint(1)
     @Column(name="intro_stud")
-    private Boolean intro_stud;
+    private Boolean introStud;
 
     //tinyint(1)
     @Column(name="intro_note")
-    private Boolean intro_note;
+    private Boolean introNote;
 
     //tinyint(1)
     @Column(name="echivalari")
@@ -90,7 +90,7 @@ public class Users implements Serializable{
 
     //tinyint(1)
     @Column(name="intro_date_ani")
-    private Boolean intro_date_ani;
+    private Boolean introDateAni;
 
     //int
     @Column(name="status")
@@ -98,15 +98,15 @@ public class Users implements Serializable{
 
     //date
     @Column(name="intro_date")
-    private Date intro_date;
+    private Date introDate;
 
     //date
     @Column(name="start_date")
-    private Date start_date;
+    private Date startDate;
 
     //date
     @Column(name="stop_date")
-    private Date stop_date;
+    private Date stopDate;
 
     //date
     @Column(name="datamod")
@@ -204,28 +204,28 @@ public class Users implements Serializable{
         this.observatii = observatii;
     }
 
-    public Boolean getViz_date() {
-        return viz_date;
+    public Boolean getVizDate() {
+        return vizDate;
     }
 
-    public void setViz_date(Boolean viz_date) {
-        this.viz_date = viz_date;
+    public void setVizDate(Boolean vizDate) {
+        this.vizDate = vizDate;
     }
 
-    public Boolean getIntro_stud() {
-        return intro_stud;
+    public Boolean getIntroStud() {
+        return introStud;
     }
 
-    public void setIntro_stud(Boolean intro_stud) {
-        this.intro_stud = intro_stud;
+    public void setIntroStud(Boolean introStud) {
+        this.introStud = introStud;
     }
 
-    public Boolean getIntro_note() {
-        return intro_note;
+    public Boolean getIntroNote() {
+        return introNote;
     }
 
-    public void setIntro_note(Boolean intro_note) {
-        this.intro_note = intro_note;
+    public void setIntroNote(Boolean introNote) {
+        this.introNote = introNote;
     }
 
     public Boolean getEchivalari() {
@@ -252,12 +252,12 @@ public class Users implements Serializable{
         this.citiredate = citiredate;
     }
 
-    public Boolean getIntro_date_ani() {
-        return intro_date_ani;
+    public Boolean getIntroDateAni() {
+        return introDateAni;
     }
 
-    public void setIntro_date_ani(Boolean intro_date_ani) {
-        this.intro_date_ani = intro_date_ani;
+    public void setIntroDateAni(Boolean introDateAni) {
+        this.introDateAni = introDateAni;
     }
 
     public Integer getStatus() {
@@ -268,27 +268,27 @@ public class Users implements Serializable{
         this.status = status;
     }
 
-    public Date getIntro_date() {
-        return intro_date;
+    public Date getIntroDate() {
+        return introDate;
     }
 
-    public void setIntro_date(Date intro_date) {
-        this.intro_date = intro_date;
+    public void setIntroDate(Date introDate) {
+        this.introDate = introDate;
     }
 
-    public Date getStart_date() {
-        return start_date;
+    public Date getStartDate() {
+        return startDate;
     }
 
-    public void setStart_date(Date start_date) {
-        this.start_date = start_date;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
 
-    public Date getStop_date() {
-        return stop_date;
+    public Date getStopDate() {
+        return stopDate;
     }
 
-    public void setStop_date(Date stop_date) {
-        this.stop_date = stop_date;
+    public void setStopDate(Date stopDate) {
+        this.stopDate = stopDate;
     }
 }

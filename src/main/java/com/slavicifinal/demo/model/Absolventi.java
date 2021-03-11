@@ -23,7 +23,7 @@ public class Absolventi implements Serializable {
     private Long id;
 
     @Column(name="id_stud")
-    private Long id_stud;
+    private Long idStud;
 
     @Column(name="idpromotie")
     private Long idpromotie;
@@ -174,12 +174,12 @@ public class Absolventi implements Serializable {
         this.id = id;
     }
 
-    public Long getId_stud() {
-        return id_stud;
+    public Long getIdStud() {
+        return idStud;
     }
 
-    public void setId_stud(Long id_stud) {
-        this.id_stud = id_stud;
+    public void setIdStud(Long idStud) {
+        this.idStud = idStud;
     }
 
     public Long getIdpromotie() {

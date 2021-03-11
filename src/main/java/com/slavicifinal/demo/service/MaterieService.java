@@ -8,8 +8,6 @@ import org.springframework.stereotype.Service;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @Service
@@ -62,8 +60,8 @@ public class MaterieService {
             materie.setDatamod(now);
             materie.setTimemod(sdf.format(timestamp));
             //update fields for materie
-            materie.setCod_mat(newMaterie.getCod_mat());
-            materie.setDenum_mat(newMaterie.getDenum_mat());
+            materie.setCodMat(newMaterie.getCodMat());
+            materie.setDenumMat(newMaterie.getDenumMat());
             materie.setOrecurs(newMaterie.getOrecurs());
             materie.setOresem(newMaterie.getOresem());
             materie.setOrelab(newMaterie.getOrelab());
