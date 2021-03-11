@@ -35,62 +35,53 @@ public class AbsolventiController {
     @GetMapping("/cauta-promotia/{promotia}")
     public ResponseEntity<Absolventi> getAbsolventByPromotia(@PathVariable String promotia) {
         Absolventi absolvent = absolventiService.getAbsolventByPromotia(promotia);
-        //  deepcode ignore XSS: <comment the reason here>
         return new ResponseEntity<>(absolvent, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-cnp/{cnp}")
     public ResponseEntity<Absolventi> getAbsolventByCnp(@PathVariable String cnp) {
-        //  deepcode ignore XSS: <comment the reason here>
         Absolventi absolvent = absolventiService.getAbsolventByCnp(cnp);
         return new ResponseEntity<>(absolvent, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-idPromotie/{idPromotie}")
     public ResponseEntity<Absolventi> getAbsolventByIdPromotie(@PathVariable Long idPromotie) {
-        //  deepcode ignore XSS: <comment the reason here>
         Absolventi absolvent = absolventiService.getAbsolventByIdPromotia(idPromotie);
         return new ResponseEntity<>(absolvent, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-nume/{nume}")
     public ResponseEntity<Absolventi> getAbsolventByNume(@PathVariable String nume) {
-        //  deepcode ignore XSS: <comment the reason here>
         Absolventi absolvent = absolventiService.getAbsolventByNume(nume);
         return new ResponseEntity<>(absolvent, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-lista-promotia/{promotia}")
     public ResponseEntity<List<Absolventi>> getAbsolventiByPromotie(@PathVariable String promotia) {
-        //  deepcode ignore XSS: <comment the reason here>
         List<Absolventi> absolventi = absolventiService.getAbsolventiListByPromotie(promotia);
         return new ResponseEntity<>(absolventi, HttpStatus.OK);
     }
 
     @PostMapping("/adauga")
     public ResponseEntity<Absolventi> adaugaAbsolvent(@RequestBody Absolventi absolvent) {
-        //  deepcode ignore XSS: <comment the reason here>
         Absolventi newabsolvent = absolventiService.saveAbsolvent(absolvent);
         return new ResponseEntity<>(newabsolvent, HttpStatus.CREATED);
     }
 
     @PostMapping("/adauga-grup")
     public ResponseEntity<List<Absolventi>> adaugaAbsolventi(@RequestBody List<Absolventi> absolventi) {
-        //  deepcode ignore XSS: <comment the reason here>
         List<Absolventi> absolventiList = absolventiService.saveAbsolventi(absolventi);
         return new ResponseEntity<>(absolventiList, HttpStatus.CREATED);
     }
 
     @PutMapping("/update/{id}")
     public ResponseEntity<Absolventi> updateStudent(@RequestBody Absolventi absolvent,@PathVariable  Long id) {
-        //  deepcode ignore XSS: <comment the reason here>
         Absolventi updateAbsolvent = absolventiService.updateAbsolvent(absolvent,id);
         return new ResponseEntity<>(updateAbsolvent, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Absolventi> deleteAbsolventById(@PathVariable Long id) {
-        //  deepcode ignore XSS: <comment the reason here>
         absolventiService.deleteAbsolventById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
