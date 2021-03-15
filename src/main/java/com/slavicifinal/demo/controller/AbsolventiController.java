@@ -82,7 +82,7 @@ public class AbsolventiController {
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Absolventi> deleteAbsolventById(@PathVariable Long id) {
-        absolventiService.deleteAbsolventById(id);
+        absolventiService.deleteById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 

@@ -6,8 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Date;
-import java.sql.Time;
+import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -56,11 +55,11 @@ public class Confani implements Serializable {
 
     //ce functie apelez pentru "time"????
     @Column(name="timemod")
-    private Time timemod;
+    private String timemod;
 
     //ce functie apelez pentru "data"????
     @Column(name="datamod")
-    private Date datamod;
+    private LocalDate datamod;
 
     public Long getId() {
         return id;
@@ -148,5 +147,21 @@ public class Confani implements Serializable {
 
     public void setIduser(Long iduser) {
         this.iduser = iduser;
+    }
+
+    public String getTimemod() {
+        return timemod;
+    }
+
+    public void setTimemod(String timemod) {
+        this.timemod = timemod;
+    }
+
+    public LocalDate getDatamod() {
+        return datamod;
+    }
+
+    public void setDatamod(LocalDate datamod) {
+        this.datamod = datamod;
     }
 }

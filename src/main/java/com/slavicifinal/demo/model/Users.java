@@ -8,119 +8,120 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Time;
+import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "users")
-public class Users implements Serializable{
+public class Users implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     //varchar 25
-    @Column(name="user", length = 25)
-    private Integer user;
+    @Column(name = "user", length = 25)
+    private int user;
 
     //varchar 25
-    @Column(name="passwd", length = 25)
+    @Column(name = "passwd", length = 25)
     private String passwd;
 
     //varchar 25
-    @Column(name="nume", length = 25)
+    @Column(name = "nume", length = 25)
     private String nume;
 
     //varchar 25
-    @Column(name="prenume", length = 25)
+    @Column(name = "prenume", length = 25)
     private String prenume;
 
     //varchar(10)
-    @Column(name="seriebi", length = 10)
+    @Column(name = "seriebi", length = 10)
     private String seriebi;
 
     //varchar(20)
-    @Column(name="nrbi", length = 20)
+    @Column(name = "nrbi", length = 20)
     private String nrbi;
 
     //blob = binary large object
-    @Column(name="domiciliu")
+    @Column(name = "domiciliu")
     private String domiciliu;
 
     //varchar(30)
-    @Column(name="tel", length = 30)
+    @Column(name = "tel", length = 30)
     private String tel;
 
     //varchar(30)
-    @Column(name="cnp", length = 30)
+    @Column(name = "cnp", length = 30)
     private String cnp;
 
     //varchar(30)
-    @Column(name="poza", length = 30)
+    @Column(name = "poza", length = 30)
     private String poza;
 
     //mediumblob
-    @Column(name="observatii")
+    @Column(name = "observatii")
     private String observatii;
 
     //int
-    @Column(name="viz_date")
+    @Column(name = "viz_date")
     private Boolean vizDate;
 
     //tinyint(1)
-    @Column(name="intro_stud")
+    @Column(name = "intro_stud")
     private Boolean introStud;
 
     //tinyint(1)
-    @Column(name="intro_note")
+    @Column(name = "intro_note")
     private Boolean introNote;
 
     //tinyint(1)
-    @Column(name="echivalari")
+    @Column(name = "echivalari")
     private Boolean echivalari;
 
     //tinyint(1)
-    @Column(name="transfer")
+    @Column(name = "transfer")
     private Boolean transfer;
 
     //tinyint(1)
-    @Column(name="citiredate")
+    @Column(name = "citiredate")
     private Boolean citiredate;
 
     //tinyint(1)
-    @Column(name="intro_date_ani")
+    @Column(name = "intro_date_ani")
     private Boolean introDateAni;
 
     //int
-    @Column(name="status")
+    @Column(name = "status")
     private Integer status;
 
     //date
-    @Column(name="intro_date")
+    @Column(name = "intro_date")
     private Date introDate;
 
     //date
-    @Column(name="start_date")
+    @Column(name = "start_date")
     private Date startDate;
 
     //date
-    @Column(name="stop_date")
+    @Column(name = "stop_date")
     private Date stopDate;
 
     //date
-    @Column(name="datamod")
-    private Date datamod;
+    @Column(name = "datamod")
+    private LocalDate datamod;
 
     //time
-    @Column(name="timemod")
-    private Time timemod;
+    @Column(name = "timemod")
+    private String timemod;
 
-    public Integer getUser() {
+    public int getUser() {
         return user;
     }
 
-    public void setUser(Integer user) {
+    public void setUser(int user) {
         this.user = user;
     }
 
@@ -290,5 +291,25 @@ public class Users implements Serializable{
 
     public void setStopDate(Date stopDate) {
         this.stopDate = stopDate;
+    }
+
+    public LocalDate getDatamod() {
+        return datamod;
+    }
+
+    public void setDatamod(LocalDate datamod) {
+        this.datamod = datamod;
+    }
+
+    public String getTimemod() {
+        return timemod;
+    }
+
+    public void setTimemod(String timemod) {
+        this.timemod = timemod;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
