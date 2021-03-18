@@ -13,21 +13,53 @@ import java.io.Serializable;
 @Entity
 @Table(name = "tempmedii")
 
-public class Tempmedii implements Serializable{
+public class Tempmedii implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     //bigint
-    @Column(name="idstud")
+    @Column(name = "idstud")
     private Long idstud;
 
     //float(5,2)
-    @Column(name="medie")
-    private Float medie;
+    @Column(name = "medie")
+    private float medie;
 
     //int
-    @Column(name="credite")
-    private Integer credite;
+    @Column(name = "credite")
+    private int credite;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getIdstud() {
+        return idstud;
+    }
+
+    public void setIdstud(Long idstud) {
+        this.idstud = idstud;
+    }
+
+    public float getMedie() {
+        return medie;
+    }
+
+    public void setMedie(float medie) {
+        this.medie = medie;
+    }
+
+    public int getCredite() {
+        return credite;
+    }
+
+    public void setCredite(int credite) {
+        this.credite = credite;
+    }
 }

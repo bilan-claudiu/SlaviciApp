@@ -1,0 +1,71 @@
+package com.slavicifinal.demo.controller;
+
+import com.slavicifinal.demo.model.Tempmedii;
+import com.slavicifinal.demo.service.TempmediiService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/tempMedii")
+public class TempmediiController {
+
+    private final TempmediiService tempmediiService;
+
+    @Autowired
+    public TempmediiController(TempmediiService tempmediiService) {
+        this.tempmediiService = tempmediiService;
+    }
+
+    @GetMapping()
+    public ResponseEntity<List<Tempmedii>> getAllUniversitati() {
+        List<Tempmedii> TempMedieList = tempmediiService.getAllTempmedii();
+        return new ResponseEntity<>(TempMedieList, HttpStatus.OK);
+    }
+
+    @GetMapping("/cauta/{idStud}")
+    public ResponseEntity<Tempmedii> gettempMediiByIdStud(@PathVariable Long idStud) {
+        Tempmedii tempmedii = tempmediiService.getTempmediiByIdstudent(idStud);
+        return new ResponseEntity<>(tempmedii, HttpStatus.OK);
+    }
+
+    @GetMapping("/cauta/{id}")
+    public ResponseEntity<Tempmedii> gettempMediiById(@PathVariable Long id) {
+        Tempmedii tempmedii = tempmediiService.getTempmediiById(id);
+        return new ResponseEntity<>(tempmedii, HttpStatus.OK);
+    }
+
+    @GetMapping("/cauta/{credite}")
+    public ResponseEntity<Tempmedii> gettempMediiByCredite(@PathVariable int credite) {
+        Tempmedii tempmedii = tempmediiService.getTempmediiByCredite(credite);
+        return new ResponseEntity<>(tempmedii, HttpStatus.OK);
+    }
+
+    @GetMapping("/cauta/{medie}")
+    public ResponseEntity<Tempmedii> gettempMediiByMedie(@PathVariable float medie) {
+        Tempmedii tempmedii = tempmediiService.getTempmediiByMedie(medie);
+        return new ResponseEntity<>(tempmedii, HttpStatus.OK);
+    }
+
+    @PostMapping("/adauga")
+    public ResponseEntity<Tempmedii> adaugaTempMedii(@RequestBody Tempmedii tempmedii) {
+        Tempmedii newTempMedii = tempmediiService.saveTempmedii(tempmedii);
+        return new ResponseEntity<>(newTempMedii, HttpStatus.CREATED);
+    }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Tempmedii> updateTempMedii(@RequestBody Tempmedii tempmedii, @PathVariable Long id) {
+        Tempmedii updateTempMedii = tempmediiService.updateTempMedii(tempmedii, id);
+        return new ResponseEntity<>(updateTempMedii, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Tempmedii> deleteTempMediiById(@PathVariable Long id) {
+        tempmediiService.deleteTempMediiById(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+}
