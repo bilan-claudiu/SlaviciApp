@@ -39,7 +39,7 @@ public class UniversitatiController {
         return new ResponseEntity<>(universitate, HttpStatus.OK);
     }
 
-    @GetMapping("/cauta-nume/{numespec}")
+    @GetMapping("/cauta-numespec/{numespec}")
     public ResponseEntity<Universitati> getUnivByNumeSpec(@PathVariable String numespec) {
         Universitati universitate = universitatiService.getUniversitateaByNumeSpec(numespec);
         return new ResponseEntity<>(universitate, HttpStatus.OK);

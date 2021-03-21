@@ -32,8 +32,8 @@ public class TempmediiService {
         return tempmediiRepository.findTempmediiByIdstud(idStudent);
     }
 
-    public Tempmedii getTempmediiByMedie(float medie) {
-        return tempmediiRepository.findTempmediiByMedie(medie);
+    public List<Tempmedii> findTempmediisByMedie(double medie) {
+        return tempmediiRepository.findTempmediisByMedie(medie);
     }
 
     public Tempmedii getTempmediiByCredite(int credite) {

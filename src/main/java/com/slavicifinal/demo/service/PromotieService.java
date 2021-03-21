@@ -28,7 +28,7 @@ public class PromotieService {
         return promotieRepository.findPromotieById(id);
     }
 
-    public Promotie getPromotieByNume (String nume){
+    public Promotie getPromotieByNume (int nume){
         return promotieRepository.findPromotieByNume(nume);
     }
 

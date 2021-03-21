@@ -33,14 +33,14 @@ public class EnglishController {
     }
 
     @GetMapping("/cauta/{id}")
-    public ResponseEntity<English> getSpecializareById(@PathVariable Long id) {
+    public ResponseEntity<English> getEnglishById(@PathVariable Long id) {
         English english = englishService.getEnglishById(id);
-        return new ResponseEntity<English>(english, HttpStatus.OK);
+        return new ResponseEntity<>(english, HttpStatus.OK);
     }
 
-    @GetMapping("/cauta/{idden}")
+    @GetMapping("/cauta-idden/{idden}")
     public ResponseEntity<English> getSpecializareByIdden(@PathVariable Long idden) {
-        English english = englishService.getEnglishById(idden);
+        English english = englishService.getEnglishByIdden(idden);
         return new ResponseEntity<English>(english, HttpStatus.OK);
     }
 

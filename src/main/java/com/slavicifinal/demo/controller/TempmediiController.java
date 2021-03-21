@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/tempMedii")
+@RequestMapping("/tempmedii")
 public class TempmediiController {
 
     private final TempmediiService tempmediiService;
@@ -26,7 +26,7 @@ public class TempmediiController {
         return new ResponseEntity<>(TempMedieList, HttpStatus.OK);
     }
 
-    @GetMapping("/cauta/{idStud}")
+    @GetMapping("/cauta-idStud/{idStud}")
     public ResponseEntity<Tempmedii> gettempMediiByIdStud(@PathVariable Long idStud) {
         Tempmedii tempmedii = tempmediiService.getTempmediiByIdstudent(idStud);
         return new ResponseEntity<>(tempmedii, HttpStatus.OK);
@@ -38,17 +38,18 @@ public class TempmediiController {
         return new ResponseEntity<>(tempmedii, HttpStatus.OK);
     }
 
-    @GetMapping("/cauta/{credite}")
+    @GetMapping("/cauta-credite/{credite}")
     public ResponseEntity<Tempmedii> gettempMediiByCredite(@PathVariable int credite) {
-        Tempmedii tempmedii = tempmediiService.getTempmediiByCredite(credite);
-        return new ResponseEntity<>(tempmedii, HttpStatus.OK);
+        Tempmedii tempmedie = tempmediiService.getTempmediiByCredite(credite);
+        return new ResponseEntity<>(tempmedie, HttpStatus.OK);
     }
 
-    @GetMapping("/cauta/{medie}")
-    public ResponseEntity<Tempmedii> gettempMediiByMedie(@PathVariable float medie) {
-        Tempmedii tempmedii = tempmediiService.getTempmediiByMedie(medie);
-        return new ResponseEntity<>(tempmedii, HttpStatus.OK);
+    @GetMapping("/cauta-medie/{medie}")
+    public ResponseEntity<List<Tempmedii>> gettempMediiByMedie(@PathVariable double medie) {
+        List<Tempmedii> TMList = tempmediiService.findTempmediisByMedie(medie);
+        return new ResponseEntity<>(TMList, HttpStatus.OK);
     }
+
 
     @PostMapping("/adauga")
     public ResponseEntity<Tempmedii> adaugaTempMedii(@RequestBody Tempmedii tempmedii) {

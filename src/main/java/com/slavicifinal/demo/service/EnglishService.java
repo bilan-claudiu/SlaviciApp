@@ -44,11 +44,9 @@ public class EnglishService {
     }
     public English updateEnglish(English newEnglish, Long id) {
         return englishRepository.findById(id).map(english -> {
-
             english.setIdden(newEnglish.getIdden());
             english.setTabel(newEnglish.getTabel());
             english.setTraducere((newEnglish.getTraducere()));
-
             return englishRepository.save(english);
         }).orElseGet(() -> {
             newEnglish.setId(id);

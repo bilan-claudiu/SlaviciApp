@@ -28,13 +28,13 @@ public class PromotieController {
     @GetMapping("/cauta/{id}")
     public ResponseEntity<Promotie> getPromotieById(@PathVariable Long id) {
         Promotie promotie = promotieService.getPromotieById(id);
-        return new ResponseEntity<Promotie>(promotie, HttpStatus.OK);
+        return new ResponseEntity<>(promotie, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-nume/{nume}")
-    public ResponseEntity<Promotie> getPromotieById(@PathVariable String nume) {
+    public ResponseEntity<Promotie> getPromotieByNume(@PathVariable int nume) {
         Promotie promotie = promotieService.getPromotieByNume(nume);
-        return new ResponseEntity<Promotie>(promotie, HttpStatus.OK);
+        return new ResponseEntity<>(promotie, HttpStatus.OK);
     }
 
     @PostMapping("/adauga")
@@ -48,6 +48,7 @@ public class PromotieController {
         promotieService.deletePromotie(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
     @PutMapping("/update/{id}")
     public ResponseEntity<Promotie> updatePromotie(@RequestBody Promotie promotie, @PathVariable Long id) {
         Promotie updatePromotie = promotieService.updatePromotie(promotie, id);

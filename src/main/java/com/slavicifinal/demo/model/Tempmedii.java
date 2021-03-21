@@ -25,7 +25,7 @@ public class Tempmedii implements Serializable {
 
     //float(5,2)
     @Column(name = "medie")
-    private float medie;
+    private double medie;
 
     //int
     @Column(name = "credite")
@@ -47,11 +47,11 @@ public class Tempmedii implements Serializable {
         this.idstud = idstud;
     }
 
-    public float getMedie() {
+    public double getMedie() {
         return medie;
     }
 
-    public void setMedie(float medie) {
+    public void setMedie(double medie) {
         this.medie = medie;
     }
 

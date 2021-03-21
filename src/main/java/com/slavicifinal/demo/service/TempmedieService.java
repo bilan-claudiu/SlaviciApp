@@ -40,7 +40,7 @@ public class TempmedieService {
         return tempmedieRepository.findTempmedieByNume(nume);
     }
 
-    public Tempmedie getTempmedieByIniatiale(String initiale) {
+    public Tempmedie getTempmedieByInitiale(String initiale) {
         return tempmedieRepository.findTempmedieByInitiale(initiale);
     }
 

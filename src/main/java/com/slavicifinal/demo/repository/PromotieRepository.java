@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PromotieRepository extends JpaRepository<Promotie,Long> {
     Promotie findPromotieById (Long id);
-    Promotie findPromotieByNume(String Nume);
+    Promotie findPromotieByNume(int Nume);
     void deleteById(Long id);
 }

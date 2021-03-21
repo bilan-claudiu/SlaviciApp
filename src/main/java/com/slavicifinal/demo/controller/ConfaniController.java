@@ -68,6 +68,13 @@ public class ConfaniController {
         return new ResponseEntity<>(confani, HttpStatus.OK);
     }
 
+    @PostMapping("/adauga")
+    public ResponseEntity<Confani> adaugaConfani(@RequestBody Confani confani) {
+        Confani newConfanie = confaniService.saveConfani(confani);
+        return new ResponseEntity<>(newConfanie, HttpStatus.CREATED);
+    }
+
+
     @PutMapping("/update/{id}")
     public ResponseEntity<Confani> updateMaterie(@RequestBody Confani confani, @PathVariable Long id) {
         Confani updateConfani = confaniService.updateConfani(confani, id);

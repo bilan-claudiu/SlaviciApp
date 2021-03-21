@@ -32,6 +32,12 @@ public class TempmedieController {
         return new ResponseEntity<>(tempmedie, HttpStatus.OK);
     }
 
+    @GetMapping("/cauta-idStud/{idStud}")
+    public ResponseEntity<Tempmedie> getTempmedieByIdStud(@PathVariable Long idStud) {
+        Tempmedie tempmedie = tempmedieService.getTempmedieByIdStudent(idStud);
+        return new ResponseEntity<>(tempmedie, HttpStatus.OK);
+    }
+
     @GetMapping("/cauta-nume/{nume}")
     public ResponseEntity<Tempmedie> getTempMedieByNume(@PathVariable String nume) {
         Tempmedie tempmedie = tempmedieService.getTempmedieByNume(nume);
@@ -39,8 +45,8 @@ public class TempmedieController {
     }
 
     @GetMapping("/cauta-initiale/{initiale}")
-    public ResponseEntity<Tempmedie> getTempMedieByInnitiale(@PathVariable String initiale) {
-        Tempmedie tempmedie = tempmedieService.getTempmedieByNume(initiale);
+    public ResponseEntity<Tempmedie> getTempMedieByInitiale(@PathVariable String initiale) {
+        Tempmedie tempmedie = tempmedieService.getTempmedieByInitiale(initiale);
         return new ResponseEntity<>(tempmedie, HttpStatus.OK);
     }
 
