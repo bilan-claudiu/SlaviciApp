@@ -2,12 +2,17 @@ package com.slavicifinal.demo.repository;
 
 import com.slavicifinal.demo.model.Confani;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
+@Repository
 public interface ConfaniRepository extends JpaRepository<Confani, Long> {
 
     Confani findConfaniById(Long id);
 
-    Confani findConfaniByPromotie(String promotie);
+   List< Confani> findConfaniByPromotie(String promotie);
+
 
     Confani findConfaniBySpecializare(String specializare);
 

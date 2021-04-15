@@ -37,7 +37,7 @@ public class ConfaniService {
         return confaniRepository.findConfaniById(id);
     }
 
-    public Confani getConfaniByPromotie(String promotia) {
+    public List<Confani> getConfaniByPromotie(String promotia) {
         return confaniRepository.findConfaniByPromotie(promotia);
     }
 

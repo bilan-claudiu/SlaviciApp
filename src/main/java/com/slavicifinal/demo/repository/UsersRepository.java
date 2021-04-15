@@ -2,7 +2,9 @@ package com.slavicifinal.demo.repository;
 
 import com.slavicifinal.demo.model.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UsersRepository extends JpaRepository<Users, Long> {
 
     Users findUsersById(Long id);

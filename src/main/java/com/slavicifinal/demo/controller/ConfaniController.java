@@ -27,16 +27,18 @@ public class ConfaniController {
     }
 
     @GetMapping("/cauta-id/{id}")
-    public ResponseEntity<Confani> getMaterieById(@PathVariable Long id) {
+    public ResponseEntity<Confani> getConfaniById(@PathVariable Long id) {
         Confani confani = confaniService.getConfaniById(id);
         return new ResponseEntity<>(confani, HttpStatus.OK);
     }
 
+
     @GetMapping("/cauta-promotie/{promotie}")
-    public ResponseEntity<Confani> getMaterieByPromotie(@PathVariable String promotie) {
-        Confani confani = confaniService.getConfaniByPromotie(promotie);
-        return new ResponseEntity<>(confani, HttpStatus.OK);
+    public ResponseEntity<List<Confani>> getConfaniByPromotie( @PathVariable String promotie) {
+        List<Confani> confaniList = confaniService.getConfaniByPromotie(promotie);
+        return new ResponseEntity<>(confaniList, HttpStatus.OK);
     }
+
 
     @GetMapping("/cauta-anstudiu/{anstudiu}")
     public ResponseEntity<Confani> getMaterieByAnStudiu(@PathVariable int anstudiu) {
@@ -57,12 +59,12 @@ public class ConfaniController {
     }
 
     @GetMapping("/cauta-formaEx/{formaEx}")
-    public ResponseEntity<Confani> getMaterieByFormaExamen(@PathVariable int formEx) {
-        Confani confani = confaniService.getConfaniByFormaExamen(formEx);
+    public ResponseEntity<Confani> getConfaniByFormaExamen(@PathVariable int formaEx) {
+        Confani confani = confaniService.getConfaniByFormaExamen(formaEx);
         return new ResponseEntity<>(confani, HttpStatus.OK);
     }
 
-    @GetMapping("/cauta-id/{idUser}")
+    @GetMapping("/cauta-idUser/{idUser}")
     public ResponseEntity<Confani> getMaterieByIdUser(@PathVariable Long idUser) {
         Confani confani = confaniService.getConfaniByIduser(idUser);
         return new ResponseEntity<>(confani, HttpStatus.OK);

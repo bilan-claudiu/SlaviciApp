@@ -20,7 +20,7 @@ public class EnglishController {
         this.englishService = englishService;
     }
 
-    @PostMapping("/adauga")
+    @PostMapping("/adauga-eng")
     public ResponseEntity<English> adaugaEnglish(@RequestBody English english) {
         English newEnglish = englishService.saveEnglish(english);
         return new ResponseEntity<>(newEnglish, HttpStatus.CREATED);
@@ -41,19 +41,19 @@ public class EnglishController {
     @GetMapping("/cauta-idden/{idden}")
     public ResponseEntity<English> getSpecializareByIdden(@PathVariable Long idden) {
         English english = englishService.getEnglishByIdden(idden);
-        return new ResponseEntity<English>(english, HttpStatus.OK);
+        return new ResponseEntity<>(english, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-tabel/{tabel}")
     public ResponseEntity<English> getEnglishBytabel(@PathVariable String tabel) {
         English english = englishService.getEnglishByTabel(tabel);
-        return new ResponseEntity<English>(english, HttpStatus.OK);
+        return new ResponseEntity<>(english, HttpStatus.OK);
     }
 
     @GetMapping("/cauta-traducere/{traducere}")
     public ResponseEntity<English> getEnglishByTraducere(@PathVariable String traducere) {
         English english = englishService.getEnglishByTraducere(traducere);
-        return new ResponseEntity<English>(english, HttpStatus.OK);
+        return new ResponseEntity<>(english, HttpStatus.OK);
     }
 
     @PutMapping("/update/{id}")

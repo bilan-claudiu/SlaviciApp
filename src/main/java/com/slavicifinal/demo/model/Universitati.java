@@ -1,8 +1,10 @@
 package com.slavicifinal.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.apache.tomcat.jni.Address;
 
 import javax.persistence.*;
@@ -107,9 +109,12 @@ public class Universitati implements Serializable{
     private int numespecen;
 
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "iduniversitate")
+    @ToString.Exclude
+    @JsonIgnore
+    @OneToOne(mappedBy = "universitati")
     private Absolventi absolventi;
+
+
 
     public Long getId() {
         return id;

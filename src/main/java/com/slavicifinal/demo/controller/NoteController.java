@@ -20,11 +20,11 @@ public class NoteController {
         this.noteService = noteService;
     }
 
-    @GetMapping("/note-student/{studentId}")
-    public ResponseEntity<List<Note>> cautaNote(@PathVariable Long studentId) {
-        List<Note> rezultat = noteService.getNote(studentId);
-        return new ResponseEntity<>(rezultat, HttpStatus.OK);
-    }
+//    @GetMapping("/note-student/{studentId}")
+//    public ResponseEntity<List<Note>> cautaNote(@PathVariable Long studentId) {
+//        List<Note> rezultat = noteService.getNote(studentId);
+//        return new ResponseEntity<>(rezultat, HttpStatus.OK);
+//    }
 
     @PostMapping("/adauga")
     public ResponseEntity<Note> adaugaNota(@RequestBody Note nota) {
