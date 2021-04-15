@@ -21,9 +21,9 @@ public class Note implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="idstud")
-    private Long idstud;
-
+//    @Column(name="idstud")
+//    private Long idstud;
+//
     @Column(name="idconfani")
     private Long idconfani;
 
@@ -46,9 +46,23 @@ public class Note implements Serializable {
     @Column(name="timemod")
     private String timemod;
 
+
+
     //ce functie apelez pentru "data"????
     @Column(name="datamod")
     private LocalDate datamod;
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "idstud")
+    private Student student;
 
     public Long getId() {
         return id;
@@ -58,13 +72,13 @@ public class Note implements Serializable {
         this.id = id;
     }
 
-    public Long getIdstud() {
-        return idstud;
-    }
-
-    public void setIdstud(Long idstud) {
-        this.idstud = idstud;
-    }
+//    public Long getIdstud() {
+//        return idstud;
+//    }
+//
+//    public void setIdstud(Long idstud) {
+//        this.idstud = idstud;
+//    }
 
     public Long getIdconfani() {
         return idconfani;

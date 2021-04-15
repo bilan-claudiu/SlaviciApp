@@ -1,8 +1,10 @@
 package com.slavicifinal.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -357,6 +359,18 @@ public class Student implements Serializable {
     @Column(name="tipstudent")
     private Integer tipstudent;
 
+    @ToString.Exclude
+    @JsonIgnore
+    @OneToOne(mappedBy = "student")
+    private Note note;
+
+    public Note getNote() {
+        return note;
+    }
+
+    public void setNote(Note note) {
+        this.note = note;
+    }
 
     public Long getId() {
         return id;

@@ -53,7 +53,7 @@ public class AbsolventiService {
         return absolventiRepository.findAbsolventisByPromotia(promotie);
     }
 
-    public void deleteAbsolventById(Long id) {
+    public void deleteById(Long id) {
         absolventiRepository.deleteById(id);
     }
 

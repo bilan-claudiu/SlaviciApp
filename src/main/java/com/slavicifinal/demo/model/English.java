@@ -28,4 +28,36 @@ public class English implements Serializable {
     //lung. max 100 caract.
     @Column(name = "traducere")
     private String traducere;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getIdden() {
+        return idden;
+    }
+
+    public void setIdden(Long idden) {
+        this.idden = idden;
+    }
+
+    public String getTabel() {
+        return tabel;
+    }
+
+    public void setTabel(String tabel) {
+        this.tabel = tabel;
+    }
+
+    public String getTraducere() {
+        return traducere;
+    }
+
+    public void setTraducere(String traducere) {
+        this.traducere = traducere;
+    }
 }

@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class Promotie implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     //lung max 50 caract.
@@ -23,4 +23,19 @@ public class Promotie implements Serializable {
     @Column(name="nume", length = 50)
     private int nume;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public int getNume() {
+        return nume;
+    }
+
+    public void setNume(int nume) {
+        this.nume = nume;
+    }
 }

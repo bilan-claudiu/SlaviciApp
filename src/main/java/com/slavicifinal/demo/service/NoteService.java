@@ -20,9 +20,9 @@ public class NoteService {
         this.noteRepository = noteRepository;
     }
 
-    public List<Note> getNote(Long studentId) {
-        return noteRepository.findNoteByIdstud(studentId);
-    }
+//    public List<Note> getNote(Long studentId) {
+//        return noteRepository.findNoteByIdstud(studentId);
+//    }
 
     public Note saveNota(Note newNota) {
         LocalDate now = LocalDate.now();
@@ -52,7 +52,7 @@ public class NoteService {
 
             //update note fields
             nota.setIdconfani(newNota.getIdconfani());
-            nota.setIdstud(newNota.getIdstud());
+            //nota.setIdstud(newNota.getIdstud());
             nota.setIduser(newNota.getIduser());
             nota.setNotaa(newNota.getNotaa());
             nota.setNotac(newNota.getNotac());
