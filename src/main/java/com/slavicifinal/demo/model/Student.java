@@ -1051,4 +1051,7 @@ public class Student implements Serializable {
     public void setTipstudent(Integer tipstudent) {
         this.tipstudent = tipstudent;
     }
+
+
+
 }
