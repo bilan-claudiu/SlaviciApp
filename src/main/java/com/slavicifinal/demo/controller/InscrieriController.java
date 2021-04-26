@@ -1,7 +1,6 @@
 package com.slavicifinal.demo.controller;
 
 import com.slavicifinal.demo.model.Inscrieri;
-
 import com.slavicifinal.demo.service.InscrieriService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
