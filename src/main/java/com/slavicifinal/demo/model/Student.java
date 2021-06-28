@@ -359,17 +359,18 @@ public class Student implements Serializable {
     @Column(name="tipstudent")
     private Integer tipstudent;
 
+
     @ToString.Exclude
     @JsonIgnore
     @OneToOne(mappedBy = "student")
-    private Note note;
+    private Absolventi absolvent;
 
-    public Note getNote() {
-        return note;
+    public Absolventi getAbsolvent() {
+        return absolvent;
     }
 
-    public void setNote(Note note) {
-        this.note = note;
+    public void setAbsolvent(Absolventi absolvent) {
+        this.absolvent = absolvent;
     }
 
     public Long getId() {

@@ -6,8 +6,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Date;
-import java.sql.Time;
 import java.time.LocalDate;
 
 @Data
@@ -46,23 +44,10 @@ public class Note implements Serializable {
     @Column(name="timemod")
     private String timemod;
 
-
-
     //ce functie apelez pentru "data"????
     @Column(name="datamod")
     private LocalDate datamod;
 
-    public Student getStudent() {
-        return student;
-    }
-
-    public void setStudent(Student student) {
-        this.student = student;
-    }
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idstud")
-    private Student student;
 
     public Long getId() {
         return id;

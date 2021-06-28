@@ -21,13 +21,13 @@ public class Absolventi implements Serializable {
     private Long id;
 
 
-//    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    //    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
 //    @JoinColumn(name = "iduniversitate")
     @Column
     private Universitati universitati;
 
-    @Column(name = "id_stud")
-    private Long idStud;
+//    @Column(name = "id_stud")
+//    private Long idStud;
 
 
     @Column(name = "idpromotie")
@@ -165,8 +165,9 @@ public class Absolventi implements Serializable {
     @Column(name = "c4")
     private float c4;
 
-
-
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_stud")
+    private Student student;
 
     public Long getId() {
         return id;
@@ -176,13 +177,13 @@ public class Absolventi implements Serializable {
         this.id = id;
     }
 
-    public Long getIdStud() {
-        return idStud;
-    }
-
-    public void setIdStud(Long idStud) {
-        this.idStud = idStud;
-    }
+//    public Long getIdStud() {
+//        return idStud;
+//    }
+//
+//    public void setIdStud(Long idStud) {
+//        this.idStud = idStud;
+//    }
 
     public Long getIdpromotie() {
         return idpromotie;
