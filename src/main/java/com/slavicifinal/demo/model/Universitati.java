@@ -109,10 +109,8 @@ public class Universitati implements Serializable{
     private int numespecen;
 
 
-    @ToString.Exclude
-    @JsonIgnore
-    @OneToOne(mappedBy = "universitati")
-    private Absolventi absolventi;
+
+
 
 
 
@@ -292,11 +290,5 @@ public class Universitati implements Serializable{
         this.numespecen = numespecen;
     }
 
-    public Absolventi getAbsolventi() {
-        return absolventi;
-    }
 
-    public void setAbsolventi(Absolventi absolventi) {
-        this.absolventi = absolventi;
-    }
 }

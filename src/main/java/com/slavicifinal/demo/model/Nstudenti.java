@@ -38,4 +38,6 @@ public class Nstudenti implements Serializable {
     @Column(name="specializare", length = 2)
     private String specializare;
 
+
+
 }

@@ -1,10 +1,8 @@
 package com.slavicifinal.demo.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -23,12 +21,14 @@ public class Absolventi implements Serializable {
     private Long id;
 
 
-    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-    @JoinColumn(name = "iduniversitate")
+//    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+//    @JoinColumn(name = "iduniversitate")
+    @Column
     private Universitati universitati;
 
     @Column(name = "id_stud")
     private Long idStud;
+
 
     @Column(name = "idpromotie")
     private Long idpromotie;
